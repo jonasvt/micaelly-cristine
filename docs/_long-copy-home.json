@@ -1,0 +1,373 @@
+{
+  "_comment": "Main portfolio page (/). Every fact here is sourced — see docs/FACTS.md before adding or changing claims.",
+
+  "meta": {
+    "title": {
+      "en": "Micaelly Cristine — Data Scientist & AI Engineer",
+      "pt": "Micaelly Cristine — Cientista de Dados & Engenheira de IA"
+    },
+    "description": {
+      "en": "Data Scientist and AI Engineer in Brazil. LLM and RAG applications in production, data pipelines on Databricks and Airflow, machine learning — and AI video production.",
+      "pt": "Cientista de Dados e Engenheira de IA no Brasil. Aplicações com LLMs e RAG em produção, pipelines de dados com Databricks e Airflow, machine learning — e produção de vídeo com IA."
+    }
+  },
+
+  "hero": {
+    "eyebrow": {"en": "Data Scientist & AI Engineer", "pt": "Cientista de Dados & Engenheira de IA"},
+    "title_pre": {"en": "I build AI and data systems that", "pt": "Construo sistemas de dados e IA que"},
+    "title_em": {"en": "hold up in production.", "pt": "funcionam em produção."},
+    "lead": {
+      "en": "LLM and RAG applications, Databricks and Airflow pipelines, machine learning models — currently at Prysmo. I also produce finished video with generative AI.",
+      "pt": "Aplicações com LLMs e RAG, pipelines em Databricks e Airflow, modelos de machine learning — hoje na Prysmo. Também produço vídeos completos com IA generativa."
+    },
+    "cta_primary": {"en": "View my work", "pt": "Ver projetos"},
+    "cta_secondary": {"en": "Let's connect", "pt": "Vamos conversar"}
+  },
+
+  "proof": [
+    {
+      "value": "4+",
+      "label": {"en": "years in data and AI roles, since 2022", "pt": "anos em dados e IA, desde 2022"}
+    },
+    {
+      "value": "~8M",
+      "label": {"en": "members at the bank whose finance pipelines I optimized", "pt": "cooperados no banco cujos pipelines financeiros otimizei"}
+    },
+    {
+      "value": "USP",
+      "label": {"en": "MBA in Data Science & Analytics, plus a published ML paper", "pt": "MBA em Data Science & Analytics e artigo de ML publicado"}
+    },
+    {
+      "value": "121",
+      "label": {"en": "AI-animated episodes delivered in 2026", "pt": "episódios animados com IA entregues em 2026"}
+    }
+  ],
+
+  "work": {
+    "label": {"en": "Selected work", "pt": "Projetos selecionados"},
+    "title": {"en": "Things I've built, shipped or published.", "pt": "Coisas que construí, entreguei ou publiquei."},
+    "projects": [
+      {
+        "id": "ai-video",
+        "visual": "video-mosaic",
+        "kicker": {"en": "AI video production · 2026", "pt": "Produção de vídeo com IA · 2026"},
+        "title": {
+          "en": "Anime drama series and a cinematic game ad, produced with AI",
+          "pt": "Séries de drama em anime e um comercial de jogo, produzidos com IA"
+        },
+        "summary": {
+          "en": "121 vertical episodes across 27 series and 40 cover artworks for AnimePocky, an animation studio in London — plus a cinematic ad for an unannounced Steam game.",
+          "pt": "121 episódios verticais em 27 séries e 40 capas para a AnimePocky, um estúdio de animação de Londres — além de um comercial cinematográfico para um jogo da Steam ainda não anunciado."
+        },
+        "role": {"en": "AI Video Creator", "pt": "AI Video Creator"},
+        "stack": ["Seedream 4.0", "Adobe Photoshop", "CapCut"],
+        "links": [
+          {"label": {"en": "See the video work", "pt": "Ver os vídeos"}, "page": "ai"}
+        ]
+      },
+      {
+        "id": "research",
+        "visual": "citation",
+        "kicker": {"en": "Research · Machine learning", "pt": "Pesquisa · Machine learning"},
+        "title": {
+          "en": "Predicting fiscal-law compliance across Mato Grosso's municipalities",
+          "pt": "Previsão do cumprimento da LRF pelos municípios de Mato Grosso"
+        },
+        "summary": {
+          "en": "My MBA thesis at USP: I scraped and merged public data from IBGE and the State Audit Court (TCE-MT), 2017–2022, and trained a Random Forest to predict which municipalities comply with Brazil's Fiscal Responsibility Law. Published as a journal article; the dataset is open on Zenodo.",
+          "pt": "Meu TCC do MBA na USP: coletei e cruzei dados públicos do IBGE e do TCE-MT, de 2017 a 2022, e treinei um Random Forest para prever quais municípios cumprem a Lei de Responsabilidade Fiscal. Virou artigo publicado; o dataset é aberto no Zenodo."
+        },
+        "role": {"en": "Author", "pt": "Autora"},
+        "stack": ["Python", "Web scraping", "Pandas", "scikit-learn", "Random Forest", "Jupyter"],
+        "citation": {
+          "title": "Previsão do Cumprimento da Lei de Responsabilidade Fiscal por Municípios do Mato Grosso utilizando Random Forest",
+          "author": "Micaelly Cristine de Moura Santos",
+          "meta": {"en": "Journal article · MBA in Data Science & Analytics, USP/Esalq", "pt": "Artigo publicado · MBA em Data Science & Analytics, USP/Esalq"},
+          "data": "IBGE · TCE-MT · 2017–2022"
+        },
+        "links": [
+          {"label": {"en": "Code on GitHub", "pt": "Código no GitHub"}, "href": "https://github.com/Micaelly2222/tcc_data_science"},
+          {"label": {"en": "Dataset on Zenodo", "pt": "Dataset no Zenodo"}, "href": "https://doi.org/10.5281/zenodo.8159329"}
+        ]
+      },
+      {
+        "id": "gate",
+        "visual": "terminal",
+        "kicker": {"en": "Python · Automation · 2026", "pt": "Python · Automação · 2026"},
+        "title": {
+          "en": "A production gate that stops incomplete creative briefs before work starts",
+          "pt": "Um gate de produção que barra briefings incompletos antes do trabalho começar"
+        },
+        "summary": {
+          "en": "Built as a technical exercise for a creative ad agency. It checks every brief against client rules, banned claims, approvals, deadlines and monthly quotas, and drafts a clarification message for each one it blocks. Standard-library Python, 22 tests, and a written cost comparison showing why no LLM call was needed.",
+          "pt": "Feito como exercício técnico para uma agência criativa de anúncios. Confere cada briefing contra regras do cliente, alegações proibidas, aprovações, prazos e cotas mensais, e escreve uma mensagem de esclarecimento para cada bloqueio. Python puro, 22 testes e uma análise de custo mostrando por que não era preciso chamar um LLM."
+        },
+        "role": {"en": "Sole developer", "pt": "Desenvolvedora única"},
+        "stack": ["Python", "Rules engine", "unittest", "GitHub Actions", "Technical design"],
+        "terminal": [
+          {"t": "cmd", "text": "python -m gate"},
+          {"t": "dim", "text": "Checked at 2026-10-13T09:00Z · policy 1.0"},
+          {"t": "row", "id": "BR-01", "client": "Northpeak Coffee", "ok": true, "reason": "Ready"},
+          {"t": "row", "id": "BR-02", "client": "Northpeak Coffee", "ok": false, "reason": "INACTIVE_PRODUCT"},
+          {"t": "row", "id": "BR-06", "client": "Lumen Skin", "ok": false, "reason": "BANNED_CLAIM"},
+          {"t": "row", "id": "BR-15", "client": "Ridge Outdoor", "ok": false, "reason": "TURNAROUND"},
+          {"t": "row", "id": "BR-16", "client": "Pawfect Treats", "ok": false, "reason": "QUOTA"},
+          {"t": "row", "id": "BR-17", "client": "Pawfect Treats", "ok": true, "reason": "Ready"},
+          {"t": "sum", "text": "19 passed · 11 blocked · 30 checked"},
+          {"t": "cmd", "text": "python -m unittest discover -s tests"},
+          {"t": "ok", "text": "Ran 22 tests — OK"}
+        ],
+        "links": [
+          {"label": {"en": "Code on GitHub", "pt": "Código no GitHub"}, "href": "https://github.com/Micaelly2222/kasper-production-gate"}
+        ]
+      },
+      {
+        "id": "pipeline",
+        "visual": "pipeline",
+        "kicker": {"en": "Data engineering", "pt": "Engenharia de dados"},
+        "title": {
+          "en": "YouTube channel analytics, orchestrated with Airflow",
+          "pt": "Análise de canais do YouTube, orquestrada com Airflow"
+        },
+        "summary": {
+          "en": "Pulls channel and video statistics from the YouTube Data API, flattens them into a single table and runs every day at 01:30 through an Airflow DAG. Also includes a proposed dimensional model and the SQL to compute its KPIs.",
+          "pt": "Coleta estatísticas de canais e vídeos pela API do YouTube, junta tudo numa tabela única e roda todo dia à 01:30 por uma DAG do Airflow. Inclui ainda uma proposta de modelagem dimensional e o SQL dos KPIs."
+        },
+        "role": {"en": "Sole developer", "pt": "Desenvolvedora única"},
+        "stack": ["Python", "YouTube Data API", "Pandas", "Apache Airflow", "SQL", "Dimensional modeling"],
+        "pipeline": [
+          {"en": "YouTube Data API v3", "pt": "YouTube Data API v3"},
+          {"en": "Python extractor", "pt": "Extrator em Python"},
+          {"en": "Pandas · one table", "pt": "Pandas · tabela única"},
+          {"en": "CSV + SQL KPIs", "pt": "CSV + KPIs em SQL"}
+        ],
+        "schedule": {"en": "Airflow DAG · daily at 01:30", "pt": "DAG no Airflow · todo dia à 01:30"},
+        "links": [
+          {"label": {"en": "Code on GitHub", "pt": "Código no GitHub"}, "href": "https://github.com/Micaelly2222/extracao_e_analise_de_dados_do_youtube"}
+        ]
+      }
+    ],
+    "more_title": {"en": "More on GitHub", "pt": "Mais no GitHub"},
+    "more": [
+      {
+        "name": {"en": "Café management system", "pt": "Sistema de gestão de cafeteria"},
+        "desc": {"en": "Orders, menu, inventory and PDF sales reports.", "pt": "Pedidos, cardápio, estoque e relatórios de vendas em PDF."},
+        "stack": "Flask · PostgreSQL · SQLAlchemy · Docker",
+        "href": "https://github.com/Micaelly2222/sistema_gerenciamento_python_flask"
+      },
+      {
+        "name": {"en": "Company management API", "pt": "API de gestão de empresa"},
+        "desc": {"en": "Create, read and update endpoints for company data.", "pt": "Endpoints de criação, leitura e atualização de dados de empresas."},
+        "stack": "FastAPI · ORM",
+        "href": "https://github.com/Micaelly2222/API_gestao_empresa"
+      },
+      {
+        "name": {"en": "ORM vs. index", "pt": "ORM vs. índice"},
+        "desc": {"en": "Measuring query performance with an ORM and with database indexes.", "pt": "Medindo performance de consultas com ORM e com índices no banco."},
+        "stack": "Python · SQL",
+        "href": "https://github.com/Micaelly2222/estudos_orm_index"
+      },
+      {
+        "name": {"en": "HTML tag counter", "pt": "Contador de tags HTML"},
+        "desc": {"en": "Counts the tags of any page and stores the results.", "pt": "Conta as tags de uma página e guarda os resultados."},
+        "stack": "FastAPI · SQLAlchemy · SQLite · React",
+        "href": "https://github.com/Micaelly2222/contador_tags"
+      },
+      {
+        "name": {"en": "Serverless calculator", "pt": "Calculadora serverless"},
+        "desc": {"en": "A Python function deployed on Azure Functions.", "pt": "Uma função Python publicada no Azure Functions."},
+        "stack": "Python · Azure Functions",
+        "href": "https://github.com/Micaelly2222/calculadora_python_azure_functions"
+      }
+    ],
+    "all_repos": {"en": "All repositories", "pt": "Todos os repositórios"}
+  },
+
+  "experience": {
+    "label": {"en": "Experience", "pt": "Experiência"},
+    "title": {"en": "Four years of data work, from public sector to production AI.", "pt": "Quatro anos com dados, do setor público à IA em produção."},
+    "items": [
+      {
+        "company": "Prysmo",
+        "role": {"en": "Data Scientist", "pt": "Cientista de Dados"},
+        "dates": {"en": "Jan 2026 — Present", "pt": "jan 2026 — atual"},
+        "bullets": [
+          {"en": "Put generative-AI applications into production with LLMs, RAG, embeddings and semantic search — with validation, fallbacks and human review so answers are reliable enough for business use.", "pt": "Coloquei em produção aplicações de IA generativa com LLMs, RAG, embeddings e busca semântica — com validação, fallback e revisão humana para que as respostas fossem confiáveis para o negócio."},
+          {"en": "Built Python, PySpark and SQL pipelines on Databricks and orchestrated Airflow DAGs for historical and recurring loads, with retries and failure handling.", "pt": "Construí pipelines em Python, PySpark e SQL no Databricks e orquestrei DAGs no Airflow para cargas históricas e recorrentes, com retries e tratamento de falhas."},
+          {"en": "Automated public-data collection with scraping and crawling, and served the data through JWT-authenticated Flask APIs in Docker, with CI/CD on Azure DevOps.", "pt": "Automatizei a coleta de dados públicos com scraping e crawling e disponibilizei os dados em APIs Flask com JWT, em Docker, com CI/CD no Azure DevOps."}
+        ],
+        "stack": "LLMs · RAG · Databricks · PySpark · Airflow · Flask · Docker"
+      },
+      {
+        "company": "Risk3 Tecnologia em Análise de Crédito",
+        "role": {"en": "Python Developer", "pt": "Desenvolvedora Python"},
+        "dates": {"en": "Mar 2025 — Oct 2025", "pt": "mar 2025 — out 2025"},
+        "bullets": [
+          {"en": "Built and maintained web crawlers and scrapers that replaced manual data collection with recurring routines.", "pt": "Desenvolvi e mantive web crawlers e scrapers que substituíram a coleta manual por rotinas recorrentes."},
+          {"en": "Turned the collected data into credit-analysis-ready datasets, with logging, validation and failure handling in Docker and Linux.", "pt": "Transformei os dados coletados em bases prontas para análise de crédito, com logging, validação e tratamento de falhas em Docker e Linux."}
+        ],
+        "stack": "Python · Scraping · ETL · Docker · Linux"
+      },
+      {
+        "company": "Tech6 Group",
+        "role": {"en": "Data Engineer", "pt": "Engenheira de Dados"},
+        "dates": {"en": "Jun 2024 — Aug 2025", "pt": "jun 2024 — ago 2025"},
+        "bullets": [
+          {"en": "Developed and optimized Oracle PL/SQL and Teradata pipelines for the Finance, Treasury and Investments team of a cooperative bank with about 8 million members.", "pt": "Desenvolvi e otimizei pipelines em PL/SQL Oracle e Teradata para o time de Finanças, Tesouraria e Investimentos de um banco com cerca de 8 milhões de cooperados."},
+          {"en": "Built Power BI dashboards for investment and finance KPIs, and automated data export and integration with Denodo.", "pt": "Construí dashboards no Power BI com KPIs de investimentos e finanças e automatizei a exportação e integração de dados com Denodo."}
+        ],
+        "stack": "Oracle PL/SQL · Teradata · Power BI · Denodo"
+      },
+      {
+        "company": "SOFTEX",
+        "role": {"en": "Innovation & Entrepreneurship Analyst (CNPq fellow)", "pt": "Analista de Inovação e Empreendedorismo (bolsista CNPq)"},
+        "dates": {"en": "Jul 2024 — Dec 2024", "pt": "jul 2024 — dez 2024"},
+        "bullets": [
+          {"en": "Collected and analyzed ICT-industry data for Softex's innovation observatory and turned it into Power BI dashboards.", "pt": "Coletei e analisei dados do setor de TIC para o observatório de inovação da Softex e os transformei em dashboards no Power BI."},
+          {"en": "Wrote articles on innovation, startups and AI, including one submitted to the 3rd International Congress of Open Innovation Cases.", "pt": "Escrevi artigos sobre inovação, startups e IA, incluindo um submetido ao 3º Congresso Internacional de Casos de Inovação Aberta."}
+        ],
+        "stack": "Data analysis · Power BI · Data storytelling"
+      },
+      {
+        "company": "EBAC",
+        "role": {"en": "Data Science Tutor", "pt": "Tutora de Ciência de Dados"},
+        "dates": {"en": "May 2024 — Aug 2024", "pt": "mai 2024 — ago 2024"},
+        "bullets": [
+          {"en": "Reviewed assignments and answered students' questions on Python, SQL and machine learning — regression, decision trees, ensembles and Random Forest — with detailed feedback.", "pt": "Corrigi atividades e tirei dúvidas de alunos sobre Python, SQL e machine learning — regressão, árvores de decisão, ensembles e Random Forest — com feedbacks detalhados."}
+        ],
+        "stack": "Python · SQL · scikit-learn · Teaching"
+      },
+      {
+        "company": "Seno",
+        "role": {"en": "Junior Back-End Developer", "pt": "Desenvolvedora Back End Júnior"},
+        "dates": {"en": "Nov 2023 — Apr 2024", "pt": "nov 2023 — abr 2024"},
+        "bullets": [
+          {"en": "Built RESTful Flask APIs with CRUD routes and OAuth2, connected to PostgreSQL and MariaDB through SQLAlchemy and running in Docker on Linux.", "pt": "Desenvolvi APIs RESTful em Flask com rotas CRUD e OAuth2, integradas a PostgreSQL e MariaDB via SQLAlchemy, em Docker sobre Linux."},
+          {"en": "Kept code quality up with pull requests, code review and documentation.", "pt": "Mantive a qualidade do código com pull requests, code review e documentação."}
+        ],
+        "stack": "Flask · OAuth2 · SQLAlchemy · PostgreSQL · Docker"
+      },
+      {
+        "company": {"en": "SEPLAG-MT — Mato Grosso State Planning Department", "pt": "SEPLAG-MT — Secretaria de Estado de Planejamento e Gestão"},
+        "role": {"en": "PL/SQL Developer", "pt": "Desenvolvedora PL/SQL"},
+        "dates": {"en": "Jun 2022 — Jan 2024", "pt": "jun 2022 — jan 2024"},
+        "bullets": [
+          {"en": "Developed and maintained Oracle PL/SQL views, procedures, tables and functions for SEAP, the state's personnel administration system, integrating data from several government areas.", "pt": "Desenvolvi e mantive views, procedures, tabelas e funções em PL/SQL Oracle para o SEAP, sistema estadual de administração de pessoas, integrando dados de várias áreas do governo."},
+          {"en": "Built Jasper Reports that users download straight from the portal.", "pt": "Criei relatórios no Jasper Reports disponíveis para extração no portal."}
+        ],
+        "stack": "Oracle PL/SQL · Jasper Reports · GitLab · Scrum"
+      },
+      {
+        "company": "Frexco",
+        "role": {"en": "Data Analyst / Engineer", "pt": "Analista/Engenheira de Dados"},
+        "dates": {"en": "Jun 2022 — Jun 2023", "pt": "jun 2022 — jun 2023"},
+        "bullets": [
+          {"en": "Built Python ETL on AWS Glue that pulled CRM data from the RD Station API into a PostgreSQL warehouse, ending manual extractions.", "pt": "Construí ETLs em Python no AWS Glue que levavam dados do CRM (API do RD Station) para um data warehouse em PostgreSQL, eliminando extrações manuais."},
+          {"en": "Monitored the jobs with CloudWatch, built Metabase dashboards and documented tables and routines in Confluence.", "pt": "Monitorei as rotinas com CloudWatch, criei dashboards no Metabase e documentei tabelas e rotinas no Confluence."}
+        ],
+        "stack": "Python · AWS Glue · S3 · PostgreSQL · Metabase"
+      }
+    ],
+    "earlier_title": {"en": "Earlier, 2018 — 2022", "pt": "Antes, 2018 — 2022"},
+    "earlier": [
+      {"en": "School administration technician — Municipal Education Department (civil servant, appointed by public exam)", "pt": "Técnica em Administração Escolar — Secretaria Municipal de Educação (servidora concursada)"},
+      {"en": "Operations technician — Agenda Assessoria: public pension (RPPS) data and regulatory reports", "pt": "Técnica Operacional — Agenda Assessoria: dados previdenciários (RPPS) e demonstrativos regulatórios"},
+      {"en": "Intern — Faspec / Uniorka: purchasing, payables and invoicing", "pt": "Estagiária — Faspec / Uniorka: cotações, contas a pagar e notas fiscais"},
+      {"en": "Intern — UFMT Economic & Socio-environmental Research Center: economic bulletins from CAGED, RAIS and PNAD data", "pt": "Estagiária — Núcleo de Pesquisas Econômicas e Socioambientais da UFMT: boletins econômicos com dados do CAGED, RAIS e PNAD"}
+    ]
+  },
+
+  "skills": {
+    "label": {"en": "Skills", "pt": "Competências"},
+    "title": {"en": "What I work with.", "pt": "Com o que eu trabalho."},
+    "groups": [
+      {
+        "name": {"en": "AI & LLMs", "pt": "IA & LLMs"},
+        "items": {"en": "LLM applications, RAG, embeddings, semantic search, output validation, human-in-the-loop review", "pt": "Aplicações com LLMs, RAG, embeddings, busca semântica, validação de respostas, revisão humana"}
+      },
+      {
+        "name": {"en": "Data engineering", "pt": "Engenharia de dados"},
+        "items": {"en": "Python, PySpark, SQL, Databricks, Delta Lake, Apache Airflow, AWS Glue, Oracle PL/SQL, Teradata, web scraping", "pt": "Python, PySpark, SQL, Databricks, Delta Lake, Apache Airflow, AWS Glue, Oracle PL/SQL, Teradata, web scraping"}
+      },
+      {
+        "name": {"en": "Machine learning & analytics", "pt": "Machine learning & análise"},
+        "items": {"en": "scikit-learn, Random Forest and ensembles, Pandas, NumPy, Jupyter, Power BI, Metabase", "pt": "scikit-learn, Random Forest e ensembles, Pandas, NumPy, Jupyter, Power BI, Metabase"}
+      },
+      {
+        "name": {"en": "Backend & cloud", "pt": "Backend & cloud"},
+        "items": {"en": "Flask, FastAPI, REST, OAuth2 and JWT, PostgreSQL, Docker, Linux, CI/CD on Azure DevOps, AWS", "pt": "Flask, FastAPI, REST, OAuth2 e JWT, PostgreSQL, Docker, Linux, CI/CD no Azure DevOps, AWS"}
+      },
+      {
+        "name": {"en": "AI video", "pt": "Vídeo com IA"},
+        "items": {"en": "Seedream 4.0, Adobe Photoshop, CapCut, character and style consistency, 9:16 editing, captions, key art and title design", "pt": "Seedream 4.0, Adobe Photoshop, CapCut, consistência de personagens e estilo, edição 9:16, legendas, key art e lettering de título"}
+      },
+      {
+        "name": {"en": "Ways of working", "pt": "Forma de trabalhar"},
+        "items": {"en": "Git, pull requests and code review, Jira, Confluence, Scrum, written documentation", "pt": "Git, pull requests e code review, Jira, Confluence, Scrum, documentação escrita"}
+      }
+    ]
+  },
+
+  "education": {
+    "label": {"en": "Education", "pt": "Formação"},
+    "title": {"en": "Economics first, then data science and software.", "pt": "Primeiro economia, depois ciência de dados e software."},
+    "items": [
+      {
+        "degree": {"en": "MBA, Data Science & Analytics", "pt": "MBA em Data Science e Analytics"},
+        "school": {"en": "University of São Paulo — USP/Esalq", "pt": "Universidade de São Paulo — USP/Esalq"},
+        "dates": "2022 — 2024"
+      },
+      {
+        "degree": {"en": "Associate degree, Systems Analysis & Development", "pt": "Tecnólogo em Análise e Desenvolvimento de Sistemas"},
+        "school": {"en": "UniFCV — Centro Universitário Cidade Verde", "pt": "UniFCV — Centro Universitário Cidade Verde"},
+        "dates": "2022 — 2024"
+      },
+      {
+        "degree": {"en": "Bachelor's, Economics", "pt": "Bacharelado em Ciências Econômicas"},
+        "school": {"en": "Federal University of Mato Grosso — UFMT", "pt": "Universidade Federal de Mato Grosso — UFMT"},
+        "dates": "2016 — 2020"
+      }
+    ],
+    "certs_title": {"en": "Certifications", "pt": "Certificações"},
+    "certs": [
+      {"en": "Programming for Everybody (Getting Started with Python)", "pt": "Programming for Everybody (Getting Started with Python)"},
+      {"en": "Python Fundamentals for Data Analysis", "pt": "Python Fundamentos para Análise de Dados"},
+      {"en": "Docker: creating and managing containers", "pt": "Docker: criando e gerenciando containers"},
+      {"en": "Web scraping with Python", "pt": "Scraping com Python: coleta de dados na web"},
+      {"en": "Introduction to Data Virtualization — Denodo", "pt": "Introdução à Virtualização de Dados — Denodo"}
+    ],
+    "langs_title": {"en": "Languages", "pt": "Idiomas"},
+    "langs": [
+      {"en": "Portuguese — native", "pt": "Português — nativo"},
+      {"en": "English — professional working proficiency", "pt": "Inglês — profissional"}
+    ]
+  },
+
+  "about": {
+    "label": {"en": "About", "pt": "Sobre"},
+    "title": {"en": "I came to code through economics.", "pt": "Cheguei ao código pela economia."},
+    "paragraphs": [
+      {
+        "en": "My first data job was an internship producing regional economic bulletins from CAGED, RAIS and PNAD at UFMT. That pulled me into programming: PL/SQL for Mato Grosso's state government, then Python pipelines and APIs, and now LLM applications running in production.",
+        "pt": "Meu primeiro trabalho com dados foi um estágio na UFMT, produzindo boletins econômicos com dados do CAGED, RAIS e PNAD. Foi isso que me levou à programação: PL/SQL para o governo de Mato Grosso, depois pipelines e APIs em Python e, hoje, aplicações com LLMs rodando em produção."
+      },
+      {
+        "en": "I like problems where the data is messy and the stakes are real — fiscal law, credit, a bank's treasury. I also like making things people watch. In 2026 I started producing AI video, and I run it like I run a pipeline: clear steps, consistent output, and a lot of iteration.",
+        "pt": "Gosto de problemas em que os dados são bagunçados e o impacto é real — lei fiscal, crédito, a tesouraria de um banco. Também gosto de fazer coisas que as pessoas assistem. Em 2026 comecei a produzir vídeo com IA, e trato isso como trato um pipeline: etapas claras, resultado consistente e muita iteração."
+      }
+    ],
+    "image_alt": {
+      "en": "Illustrated portrait of Micaelly: red hair, round glasses and a cream cardigan, hugging a small dark-brown dog",
+      "pt": "Retrato ilustrado da Micaelly: cabelo ruivo, óculos redondos e casaco creme, abraçando um cachorrinho marrom-escuro"
+    }
+  },
+
+  "contact": {
+    "label": {"en": "Contact", "pt": "Contato"},
+    "title": {"en": "Let's talk.", "pt": "Vamos conversar."},
+    "body": {
+      "en": "Open to remote roles in data science, data engineering and AI engineering — and to AI video projects. Email is the fastest way to reach me.",
+      "pt": "Aberta a vagas remotas em ciência de dados, engenharia de dados e engenharia de IA — e a projetos de vídeo com IA. O jeito mais rápido de falar comigo é por e-mail."
+    }
+  }
+}

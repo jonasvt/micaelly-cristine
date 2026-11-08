@@ -1,0 +1,536 @@
+{
+  "_comment": "Main portfolio page (/). RULES: glanceable — numbers, visuals, one-line results, no paragraphs; no mention of AI video (the AI Video Creator page is independent). Every fact is sourced in docs/FACTS.md. Longer versions of all texts: docs/_long-copy-home.json.",
+  "meta": {
+    "title": {
+      "en": "Micaelly Cristine | Data Scientist & AI Engineer",
+      "pt": "Micaelly Cristine | Cientista de Dados & Engenheira de IA"
+    },
+    "description": {
+      "en": "Data Scientist and AI Engineer in Brazil: LLM and RAG applications in production, data pipelines and machine learning.",
+      "pt": "Cientista de Dados e Engenheira de IA no Brasil: LLMs e RAG em produção, pipelines de dados e machine learning."
+    }
+  },
+  "hero": {
+    "eyebrow": {
+      "en": "Data Scientist & AI Engineer",
+      "pt": "Cientista de Dados & Engenheira de IA"
+    },
+    "title_pre": {
+      "en": "AI and data systems that",
+      "pt": "Sistemas de dados e IA que"
+    },
+    "title_em": {
+      "en": "hold up in production.",
+      "pt": "funcionam em produção."
+    },
+    "lead": {
+      "en": "LLMs · RAG · Databricks · Airflow · Machine learning · Python",
+      "pt": "LLMs · RAG · Databricks · Airflow · Machine learning · Python"
+    },
+    "cta_primary": {
+      "en": "View my work",
+      "pt": "Ver projetos"
+    },
+    "cta_secondary": {
+      "en": "Let's connect",
+      "pt": "Vamos conversar"
+    }
+  },
+  "proof": [
+    {
+      "value": "4+",
+      "label": {
+        "en": "years in data & AI",
+        "pt": "anos em dados e IA"
+      }
+    },
+    {
+      "value": "~8M",
+      "label": {
+        "en": "bank members served by my pipelines",
+        "pt": "cooperados atendidos pelos meus pipelines"
+      }
+    },
+    {
+      "value": "USP",
+      "label": {
+        "en": "MBA, Data Science + published paper",
+        "pt": "MBA em Data Science + artigo publicado"
+      }
+    },
+    {
+      "value": "8",
+      "label": {
+        "en": "companies and public bodies in data & tech",
+        "pt": "empresas e órgãos públicos em dados e tecnologia"
+      }
+    }
+  ],
+  "work": {
+    "label": {
+      "en": "Work",
+      "pt": "Projetos"
+    },
+    "title": {
+      "en": "Selected projects",
+      "pt": "Projetos em destaque"
+    },
+    "projects": [
+      {
+        "id": "research",
+        "visual": "citation",
+        "kicker": {
+          "en": "Research · Machine learning",
+          "pt": "Pesquisa · Machine learning"
+        },
+        "title": {
+          "en": "Published paper: predicting fiscal-law compliance in Mato Grosso",
+          "pt": "Artigo publicado: previsão do cumprimento da LRF em Mato Grosso"
+        },
+        "stack": [
+          "Python",
+          "Scraping",
+          "scikit-learn",
+          "Random Forest"
+        ],
+        "citation": {
+          "title": "Previsão do Cumprimento da Lei de Responsabilidade Fiscal por Municípios do Mato Grosso utilizando Random Forest",
+          "author": "Micaelly Cristine de Moura Santos",
+          "meta": {
+            "en": "Journal article · MBA thesis, USP/Esalq",
+            "pt": "Artigo publicado · TCC do MBA, USP/Esalq"
+          },
+          "data": "IBGE · TCE-MT · 2017-2022"
+        },
+        "links": [
+          {
+            "label": {
+              "en": "Code",
+              "pt": "Código"
+            },
+            "href": "https://github.com/Micaelly2222/tcc_data_science"
+          },
+          {
+            "label": {
+              "en": "Open dataset",
+              "pt": "Dataset aberto"
+            },
+            "href": "https://doi.org/10.5281/zenodo.8159329"
+          }
+        ]
+      },
+      {
+        "id": "gate",
+        "visual": "terminal",
+        "kicker": {
+          "en": "Python · Automation · 2026",
+          "pt": "Python · Automação · 2026"
+        },
+        "title": {
+          "en": "A gate that blocks incomplete ad briefs before production",
+          "pt": "Um gate que barra briefings incompletos antes da produção"
+        },
+        "stack": [
+          "Python",
+          "22 tests",
+          "$0 LLM cost"
+        ],
+        "terminal": [
+          {
+            "t": "cmd",
+            "text": "python -m gate"
+          },
+          {
+            "t": "dim",
+            "text": "Checked at 2026-10-13T09:00Z · policy 1.0"
+          },
+          {
+            "t": "row",
+            "id": "BR-01",
+            "client": "Northpeak Coffee",
+            "ok": true,
+            "reason": "Ready"
+          },
+          {
+            "t": "row",
+            "id": "BR-02",
+            "client": "Northpeak Coffee",
+            "ok": false,
+            "reason": "INACTIVE_PRODUCT"
+          },
+          {
+            "t": "row",
+            "id": "BR-06",
+            "client": "Lumen Skin",
+            "ok": false,
+            "reason": "BANNED_CLAIM"
+          },
+          {
+            "t": "row",
+            "id": "BR-15",
+            "client": "Ridge Outdoor",
+            "ok": false,
+            "reason": "TURNAROUND"
+          },
+          {
+            "t": "row",
+            "id": "BR-16",
+            "client": "Pawfect Treats",
+            "ok": false,
+            "reason": "QUOTA"
+          },
+          {
+            "t": "row",
+            "id": "BR-17",
+            "client": "Pawfect Treats",
+            "ok": true,
+            "reason": "Ready"
+          },
+          {
+            "t": "sum",
+            "text": "19 passed · 11 blocked · 30 checked"
+          },
+          {
+            "t": "cmd",
+            "text": "python -m unittest discover -s tests"
+          },
+          {
+            "t": "ok",
+            "text": "Ran 22 tests · OK"
+          }
+        ],
+        "links": [
+          {
+            "label": {
+              "en": "Code",
+              "pt": "Código"
+            },
+            "href": "https://github.com/Micaelly2222/kasper-production-gate"
+          }
+        ]
+      },
+      {
+        "id": "pipeline",
+        "visual": "pipeline",
+        "kicker": {
+          "en": "Data engineering",
+          "pt": "Engenharia de dados"
+        },
+        "title": {
+          "en": "YouTube analytics pipeline, scheduled daily with Airflow",
+          "pt": "Pipeline de análise do YouTube, agendado todo dia no Airflow"
+        },
+        "stack": [
+          "Python",
+          "Airflow",
+          "Pandas",
+          "SQL"
+        ],
+        "pipeline": [
+          {
+            "en": "YouTube Data API",
+            "pt": "YouTube Data API"
+          },
+          {
+            "en": "Python extractor",
+            "pt": "Extrator em Python"
+          },
+          {
+            "en": "Pandas · one table",
+            "pt": "Pandas · tabela única"
+          },
+          {
+            "en": "SQL KPIs",
+            "pt": "KPIs em SQL"
+          }
+        ],
+        "schedule": {
+          "en": "Airflow · daily 01:30",
+          "pt": "Airflow · todo dia 01:30"
+        },
+        "links": [
+          {
+            "label": {
+              "en": "Code",
+              "pt": "Código"
+            },
+            "href": "https://github.com/Micaelly2222/extracao_e_analise_de_dados_do_youtube"
+          }
+        ]
+      }
+    ],
+    "more_title": {
+      "en": "More on GitHub",
+      "pt": "Mais no GitHub"
+    },
+    "more": [
+      {
+        "name": {
+          "en": "Café management system",
+          "pt": "Sistema de cafeteria"
+        },
+        "stack": "Flask · PostgreSQL · Docker",
+        "href": "https://github.com/Micaelly2222/sistema_gerenciamento_python_flask"
+      },
+      {
+        "name": {
+          "en": "Company management API",
+          "pt": "API de gestão de empresa"
+        },
+        "stack": "FastAPI · ORM",
+        "href": "https://github.com/Micaelly2222/API_gestao_empresa"
+      },
+      {
+        "name": {
+          "en": "ORM vs. index benchmark",
+          "pt": "ORM vs. índice"
+        },
+        "stack": "Python · SQL",
+        "href": "https://github.com/Micaelly2222/estudos_orm_index"
+      },
+      {
+        "name": {
+          "en": "HTML tag counter",
+          "pt": "Contador de tags HTML"
+        },
+        "stack": "FastAPI · React",
+        "href": "https://github.com/Micaelly2222/contador_tags"
+      },
+      {
+        "name": {
+          "en": "Serverless calculator",
+          "pt": "Calculadora serverless"
+        },
+        "stack": "Azure Functions",
+        "href": "https://github.com/Micaelly2222/calculadora_python_azure_functions"
+      }
+    ],
+    "all_repos": {
+      "en": "All repositories",
+      "pt": "Todos os repositórios"
+    }
+  },
+  "experience": {
+    "label": {
+      "en": "Career",
+      "pt": "Carreira"
+    },
+    "title": {
+      "en": "Experience",
+      "pt": "Experiência"
+    },
+    "items": [
+      {
+        "company": "Prysmo",
+        "role": {
+          "en": "Data Scientist",
+          "pt": "Cientista de Dados"
+        },
+        "dates": {
+          "en": "Since 2026",
+          "pt": "Desde 2026"
+        },
+        "result": {
+          "en": "LLM + RAG apps in production; Databricks & Airflow pipelines",
+          "pt": "Apps com LLM + RAG em produção; pipelines Databricks e Airflow"
+        }
+      },
+      {
+        "company": "Risk3",
+        "role": {
+          "en": "Python Developer",
+          "pt": "Desenvolvedora Python"
+        },
+        "dates": "2025",
+        "result": {
+          "en": "Scrapers that replaced manual data collection for credit analysis",
+          "pt": "Scrapers que substituíram a coleta manual para análise de crédito"
+        }
+      },
+      {
+        "company": "Tech6 Group",
+        "role": {
+          "en": "Data Engineer",
+          "pt": "Engenheira de Dados"
+        },
+        "dates": "2024-2025",
+        "result": {
+          "en": "Finance pipelines for a bank with ~8M members; Power BI",
+          "pt": "Pipelines financeiros para um banco com ~8M de cooperados; Power BI"
+        }
+      },
+      {
+        "company": "SOFTEX",
+        "role": {
+          "en": "Innovation Analyst (CNPq fellow)",
+          "pt": "Analista de Inovação (bolsista CNPq)"
+        },
+        "dates": "2024",
+        "result": {
+          "en": "ICT-industry dashboards and research articles",
+          "pt": "Dashboards do setor de TIC e artigos de pesquisa"
+        }
+      },
+      {
+        "company": "EBAC",
+        "role": {
+          "en": "Data Science Tutor",
+          "pt": "Tutora de Ciência de Dados"
+        },
+        "dates": "2024",
+        "result": {
+          "en": "Taught Python, SQL and machine learning",
+          "pt": "Tutoria em Python, SQL e machine learning"
+        }
+      },
+      {
+        "company": "Seno",
+        "role": {
+          "en": "Back-End Developer",
+          "pt": "Desenvolvedora Back End"
+        },
+        "dates": "2023-2024",
+        "result": {
+          "en": "Flask REST APIs with OAuth2, in Docker",
+          "pt": "APIs REST em Flask com OAuth2, em Docker"
+        }
+      },
+      {
+        "company": "SEPLAG-MT",
+        "role": {
+          "en": "PL/SQL Developer",
+          "pt": "Desenvolvedora PL/SQL"
+        },
+        "dates": "2022-2024",
+        "result": {
+          "en": "Oracle PL/SQL for Mato Grosso's state personnel system",
+          "pt": "PL/SQL Oracle no sistema de pessoal do governo de MT"
+        }
+      },
+      {
+        "company": "Frexco",
+        "role": {
+          "en": "Data Analyst / Engineer",
+          "pt": "Analista/Engenheira de Dados"
+        },
+        "dates": "2022-2023",
+        "result": {
+          "en": "AWS Glue ETL that ended manual CRM extractions",
+          "pt": "ETL no AWS Glue que acabou com extrações manuais do CRM"
+        }
+      }
+    ]
+  },
+  "skills": {
+    "label": {
+      "en": "Skills",
+      "pt": "Competências"
+    },
+    "groups": [
+      {
+        "name": {
+          "en": "AI",
+          "pt": "IA"
+        },
+        "items": [
+          "LLMs",
+          "RAG",
+          "Embeddings",
+          "Semantic search"
+        ]
+      },
+      {
+        "name": {
+          "en": "Data",
+          "pt": "Dados"
+        },
+        "items": [
+          "Python",
+          "PySpark",
+          "SQL",
+          "Databricks",
+          "Airflow",
+          "AWS Glue",
+          "Oracle PL/SQL"
+        ]
+      },
+      {
+        "name": {
+          "en": "ML & BI",
+          "pt": "ML & BI"
+        },
+        "items": [
+          "scikit-learn",
+          "Pandas",
+          "Power BI",
+          "Metabase"
+        ]
+      },
+      {
+        "name": {
+          "en": "Backend",
+          "pt": "Backend"
+        },
+        "items": [
+          "Flask",
+          "FastAPI",
+          "PostgreSQL",
+          "Docker",
+          "CI/CD"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "label": {
+      "en": "Education",
+      "pt": "Formação"
+    },
+    "items": [
+      {
+        "degree": {
+          "en": "MBA, Data Science & Analytics",
+          "pt": "MBA, Data Science e Analytics"
+        },
+        "school": "USP/Esalq",
+        "dates": "2024"
+      },
+      {
+        "degree": {
+          "en": "Systems Analysis & Development",
+          "pt": "Análise e Desenvolvimento de Sistemas"
+        },
+        "school": "UniFCV",
+        "dates": "2024"
+      },
+      {
+        "degree": {
+          "en": "Economics",
+          "pt": "Ciências Econômicas"
+        },
+        "school": "UFMT",
+        "dates": "2020"
+      }
+    ],
+    "langs": {
+      "en": "Portuguese (native) · English (professional)",
+      "pt": "Português (nativo) · Inglês (profissional)"
+    }
+  },
+  "about": {
+    "image_alt": {
+      "en": "Illustrated portrait of Micaelly: red hair, round glasses and a cream cardigan, hugging a small dark-brown dog",
+      "pt": "Retrato ilustrado da Micaelly: cabelo ruivo, óculos redondos e casaco creme, abraçando um cachorrinho marrom-escuro"
+    }
+  },
+  "contact": {
+    "label": {
+      "en": "Contact",
+      "pt": "Contato"
+    },
+    "title": {
+      "en": "Let's talk.",
+      "pt": "Vamos conversar."
+    }
+  }
+}

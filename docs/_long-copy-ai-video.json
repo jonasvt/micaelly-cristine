@@ -1,0 +1,242 @@
+{
+  "_comment": "AI Video Creator page (/ai-video-creator/). Not in the main navigation; shared by direct link. Video files live in src/static/media/video/<slug>.mp4 + <slug>.webp (poster) — generate them with tools/prepare_media.py. See README → 'Add a new AI video'.",
+
+  "meta": {
+    "title": {
+      "en": "Micaelly Cristine — AI Video Creator",
+      "pt": "Micaelly Cristine — AI Video Creator"
+    },
+    "description": {
+      "en": "AI video production by Micaelly Cristine: a cinematic game ad, 121 anime-style drama episodes across 27 series, and 40 cover artworks.",
+      "pt": "Produção de vídeo com IA por Micaelly Cristine: um comercial cinematográfico de jogo, 121 episódios de drama em estilo anime em 27 séries e 40 capas."
+    }
+  },
+
+  "hero": {
+    "eyebrow": {"en": "AI Video Creator", "pt": "AI Video Creator"},
+    "title_pre": {"en": "Cinematic video,", "pt": "Vídeo cinematográfico,"},
+    "title_em": {"en": "made with AI.", "pt": "feito com IA."},
+    "lead": {
+      "en": "I take a brief or a script to a finished, platform-ready video — photoreal ads or anime-style series. I own the look, the character consistency and the edit. AI is the toolset; the piece is the product.",
+      "pt": "Levo um briefing ou roteiro até um vídeo pronto para publicar — de comerciais fotorrealistas a séries em estilo anime. Cuido do visual, da consistência dos personagens e da edição. A IA é a ferramenta; o vídeo é o produto."
+    },
+    "cta_primary": {"en": "Watch the work", "pt": "Ver os trabalhos"},
+    "cta_secondary": {"en": "Get in touch", "pt": "Falar comigo"}
+  },
+
+  "featured": {
+    "slug": "game-ad",
+    "label": {"en": "Featured · Game ad", "pt": "Destaque · Comercial de jogo"},
+    "title": {"en": "Epic fantasy ad for an unannounced Steam game", "pt": "Comercial de fantasia épica para um jogo da Steam não anunciado"},
+    "summary": {
+      "en": "A 26-second spot: an orc army on the march, a villain's reveal, a hero raising twin swords, and an explosion that turns the battle. Photoreal, 16:9, built for a game launch. The game is still under wraps, so its name stays off this page.",
+      "pt": "Um spot de 26 segundos: um exército de orcs em marcha, a revelação do vilão, um herói erguendo duas espadas e uma explosão que vira a batalha. Fotorrealista, 16:9, feito para o lançamento de um jogo. O jogo ainda é segredo, então o nome fica de fora desta página."
+    },
+    "poster_alt": {
+      "en": "A hero in a leather coat stands in front of a stone castle, two great swords planted in the ground beside him",
+      "pt": "Um herói de casaco de couro diante de um castelo de pedra, com duas grandes espadas fincadas no chão ao lado"
+    },
+    "facts": [
+      {"k": "role", "v": {"en": "AI Video Creator", "pt": "AI Video Creator"}},
+      {"k": "what_i_did", "v": {"en": "Shot generation, visual continuity, edit and pacing", "pt": "Geração dos planos, continuidade visual, edição e ritmo"}},
+      {"k": "format", "v": {"en": "16:9 · 1080p60 · 26 s", "pt": "16:9 · 1080p60 · 26 s"}},
+      {"k": "focus", "v": {"en": "Photoreal style, action, scale", "pt": "Estilo fotorrealista, ação, escala"}}
+    ]
+  },
+
+  "stats": [
+    {"value": "121", "label": {"en": "anime-style episodes", "pt": "episódios em estilo anime"}},
+    {"value": "27", "label": {"en": "drama series", "pt": "séries de drama"}},
+    {"value": "40", "label": {"en": "cover artworks", "pt": "capas"}},
+    {"value": "2", "label": {"en": "visual styles: anime and photoreal", "pt": "estilos: anime e fotorrealista"}}
+  ],
+
+  "series": {
+    "label": {"en": "Series · AnimePocky, 2026", "pt": "Séries · AnimePocky, 2026"},
+    "title": {"en": "Live-action short dramas, re-imagined as anime.", "pt": "Dramas curtos live-action, reimaginados como anime."},
+    "intro": {
+      "en": "For AnimePocky, an independent animation studio in London, I produced 121 vertical episodes across 27 series in April and May 2026. Each episode keeps the original dialogue and timing; every shot is rebuilt in one consistent anime style — the same faces, outfits and sets from the first scene to the last. Six episodes, picked for range:",
+      "pt": "Para a AnimePocky, estúdio de animação independente de Londres, produzi 121 episódios verticais em 27 séries entre abril e maio de 2026. Cada episódio mantém o diálogo e o tempo originais; cada plano é refeito num único estilo de anime — os mesmos rostos, figurinos e cenários do primeiro ao último plano. Seis episódios, escolhidos pela variedade:"
+    },
+    "role_line": {
+      "en": "Role on every episode: AI adaptation, character and style consistency, edit, captions and delivery.",
+      "pt": "Meu papel em todos os episódios: adaptação com IA, consistência de personagens e estilo, edição, legendas e entrega."
+    },
+    "items": [
+      {
+        "slug": "billionaire-hearts",
+        "title": "Billionaire Hearts and Fireworks",
+        "tag": {"en": "Ep. 1 · Romance", "pt": "Ep. 1 · Romance"},
+        "logline": {
+          "en": "A Marine is promoted to five-star general in front of the President — and turns down the after-party for a date.",
+          "pt": "Um fuzileiro é promovido a general cinco estrelas diante do presidente — e recusa a festa porque tem um encontro."
+        },
+        "focus": {"en": "Uniforms, medals and insignia held consistent through a crowded ceremony.", "pt": "Uniformes, medalhas e insígnias consistentes numa cerimônia cheia de gente."},
+        "alt": {"en": "Anime-style Marine officer in dress blues and a white cap in front of an American flag", "pt": "Oficial fuzileiro em estilo anime, com farda de gala e quepe branco, diante de uma bandeira americana"}
+      },
+      {
+        "slug": "doomed-consort",
+        "title": "The Doomed Consort",
+        "tag": {"en": "Ep. 1 · Historical drama", "pt": "Ep. 1 · Drama de época"},
+        "logline": {
+          "en": "A loyal consort is accused of plotting against the emperor's favourite — and refuses to confess.",
+          "pt": "Uma consorte leal é acusada de conspirar contra a favorita do imperador — e se recusa a confessar."
+        },
+        "focus": {"en": "Period costume, hair ornaments and high-emotion close-ups.", "pt": "Figurino de época, adornos de cabelo e closes de muita emoção."},
+        "alt": {"en": "Anime-style woman in white and red palace robes holding a whip", "pt": "Mulher em estilo anime com vestes palacianas brancas e vermelhas segurando um chicote"}
+      },
+      {
+        "slug": "frozen-regret",
+        "title": "Walking Away From My Alpha's Frozen Regret",
+        "tag": {"en": "Ep. 1 · Fantasy", "pt": "Ep. 1 · Fantasia"},
+        "logline": {
+          "en": "Every fifty years, a she-wolf is sacrificed to the moon goddess. This year, Lyra volunteers.",
+          "pt": "A cada cinquenta anos, uma loba é sacrificada à deusa da lua. Este ano, Lyra se oferece."
+        },
+        "focus": {"en": "Fantasy wardrobe and a cold blue palette carried across ritual, press and party scenes.", "pt": "Figurino de fantasia e paleta azul-fria mantidos entre ritual, coletiva e festa."},
+        "alt": {"en": "Anime-style young woman in a blue cape standing at an ice altar", "pt": "Jovem em estilo anime com capa azul diante de um altar de gelo"}
+      },
+      {
+        "slug": "mommy-kept-the-truth",
+        "title": "Daddy Lost the Past, Mommy Kept the Truth",
+        "tag": {"en": "Ep. 1 · Melodrama", "pt": "Ep. 1 · Melodrama"},
+        "logline": {
+          "en": "A car crash, a coma and an arrest in the hospital hallway: Evan is accused of killing her fiancé's parents.",
+          "pt": "Um acidente, um coma e uma prisão no corredor do hospital: Evan é acusada de matar os pais do noivo."
+        },
+        "focus": {"en": "Hospital realism, tears and fast dramatic cuts with word-by-word captions.", "pt": "Realismo de hospital, lágrimas e cortes rápidos com legendas palavra por palavra."},
+        "alt": {"en": "Anime-style woman in a white dress waiting alone in a hospital corridor", "pt": "Mulher em estilo anime, de vestido branco, esperando sozinha num corredor de hospital"}
+      },
+      {
+        "slug": "studio-diary",
+        "title": "Studio Diary EP 60 — A Day Filming with Me",
+        "tag": {"en": "Vlog · Product integration", "pt": "Vlog · Integração de produto"},
+        "logline": {
+          "en": "An actor's morning before a day on set, including a product integration for the Velora S2 hair dryer.",
+          "pt": "A manhã de uma atriz antes de um dia de gravação, com integração de produto do secador Velora S2."
+        },
+        "focus": {"en": "A real product kept recognisable in every shot — the consistency brand work depends on.", "pt": "Um produto real reconhecível em todos os planos — a consistência de que trabalho com marcas depende."},
+        "alt": {"en": "Anime-style actress with wet hair holding a lilac hair dryer", "pt": "Atriz em estilo anime, com cabelo molhado, segurando um secador lilás"}
+      },
+      {
+        "slug": "love-tides",
+        "title": "Love Tides EP 61 — Valentine by the Shore",
+        "tag": {"en": "Street interview · Unscripted", "pt": "Entrevista de rua · Sem roteiro"},
+        "logline": {
+          "en": "Valentine's Day interviews on the beach, with roses, a pink microphone and two hosts.",
+          "pt": "Entrevistas de Dia dos Namorados na praia, com rosas, um microfone rosa e dois apresentadores."
+        },
+        "focus": {"en": "Outdoor light, several hosts and unscripted talk translated into anime.", "pt": "Luz externa, vários apresentadores e conversa sem roteiro traduzidas para anime."},
+        "alt": {"en": "Anime-style host in a striped sweater holding a pink microphone and a red rose by the sea", "pt": "Apresentador em estilo anime, de suéter listrado, com microfone rosa e uma rosa vermelha à beira-mar"}
+      }
+    ]
+  },
+
+  "covers": {
+    "label": {"en": "Key art & title design", "pt": "Key art & lettering de título"},
+    "title": {"en": "40 covers, one per series.", "pt": "40 capas, uma por série."},
+    "intro": {
+      "en": "Every series needed a cover that reads at thumbnail size. I generated the key art with Seedream 4.0 and finished each one in Photoshop with its own title lockup.",
+      "pt": "Cada série precisava de uma capa legível em tamanho de miniatura. Gerei a key art com o Seedream 4.0 e finalizei cada uma no Photoshop, com lettering próprio."
+    },
+    "items": [
+      {"file": "silverwood", "title": "Silverwood Academy"},
+      {"file": "finalboss", "title": "Out of the Way! I'm the Final Boss"},
+      {"file": "voidsignal", "title": "Void Signal"},
+      {"file": "mydad", "title": "My Dad, the Arms Dealer"},
+      {"file": "tearsofgrace", "title": "Tears of Grace"},
+      {"file": "raceagainsttime", "title": "Race Against Time"},
+      {"file": "deathshand", "title": "The Return of Death's Hand"},
+      {"file": "artificiallove", "title": "Artificial Love"},
+      {"file": "godsheart", "title": "Heir to a God's Heart"},
+      {"file": "wrecked", "title": "Wrecked"},
+      {"file": "forgottenquaterbak", "title": "Return of the Forgotten Quarterback"},
+      {"file": "hercrown", "title": "Reclaiming Her Crown"}
+    ],
+    "breakdown_title": {"en": "Title lockup", "pt": "Lettering"},
+    "breakdown_final": {"en": "Final cover", "pt": "Capa final"},
+    "breakdown_caption": {
+      "en": "Void Signal: the title is designed as its own layer, then composited over the key art.",
+      "pt": "Void Signal: o título é desenhado como uma camada própria e depois composto sobre a key art."
+    }
+  },
+
+  "process": {
+    "label": {"en": "Process", "pt": "Processo"},
+    "title": {"en": "How a piece gets made.", "pt": "Como um vídeo é feito."},
+    "steps": [
+      {
+        "name": {"en": "Break down the source", "pt": "Decupar o material"},
+        "text": {"en": "Split the script or episode into shots and beats. List every character, outfit and location that has to stay the same.", "pt": "Dividir o roteiro ou episódio em planos e momentos. Listar cada personagem, figurino e cenário que precisa se manter igual."}
+      },
+      {
+        "name": {"en": "Lock the look", "pt": "Definir o visual"},
+        "text": {"en": "Set the style and a reference for each character, so faces and costumes don't drift between shots or episodes.", "pt": "Fixar o estilo e uma referência para cada personagem, para que rostos e figurinos não mudem entre planos ou episódios."}
+      },
+      {
+        "name": {"en": "Generate shot by shot", "pt": "Gerar plano a plano"},
+        "text": {"en": "Generate stills and motion for each shot, and regenerate anything that comes out off-model.", "pt": "Gerar imagens e movimento para cada plano e refazer o que sair fora do personagem."}
+      },
+      {
+        "name": {"en": "Edit to the dialogue", "pt": "Editar no tempo do diálogo"},
+        "text": {"en": "Cut to the dialogue, music and pacing — 9:16 for social, 16:9 for trailers and ads — and add captions where the format calls for them.", "pt": "Cortar no tempo do diálogo, da música e do ritmo — 9:16 para redes, 16:9 para trailers e anúncios — e legendar quando o formato pede."}
+      },
+      {
+        "name": {"en": "Package", "pt": "Embalar"},
+        "text": {"en": "Design the cover key art and title lockup so the piece works as a thumbnail too.", "pt": "Criar key art e lettering da capa para que o vídeo funcione também como miniatura."}
+      },
+      {
+        "name": {"en": "Deliver", "pt": "Entregar"},
+        "text": {"en": "Export per platform and hand off episode by episode, on schedule.", "pt": "Exportar por plataforma e entregar episódio por episódio, no prazo."}
+      }
+    ]
+  },
+
+  "toolkit": {
+    "label": {"en": "Toolkit", "pt": "Ferramentas"},
+    "title": {"en": "Tools in the work above.", "pt": "Ferramentas nos trabalhos acima."},
+    "note": {
+      "en": "Only tools that can be traced in the project files are listed here.",
+      "pt": "Só aparecem aqui ferramentas que dá para comprovar nos arquivos dos projetos."
+    },
+    "items": [
+      {
+        "category": {"en": "Image generation", "pt": "Geração de imagem"},
+        "tool": "Seedream 4.0",
+        "use": {"en": "Key art and character images (via BytePlus ModelArk)", "pt": "Key art e imagens de personagens (via BytePlus ModelArk)"},
+        "verified": true
+      },
+      {
+        "category": {"en": "Design & compositing", "pt": "Design & composição"},
+        "tool": "Adobe Photoshop",
+        "use": {"en": "Cover finishing and title lockups", "pt": "Finalização das capas e lettering"},
+        "verified": true
+      },
+      {
+        "category": {"en": "Editing", "pt": "Edição"},
+        "tool": "CapCut",
+        "use": {"en": "Edit, captions and final export", "pt": "Edição, legendas e exportação final"},
+        "verified": true
+      }
+    ]
+  },
+
+  "also": {
+    "label": {"en": "Also", "pt": "Também"},
+    "title": {"en": "By day, I'm a data scientist and AI engineer.", "pt": "No dia a dia, sou cientista de dados e engenheira de IA."},
+    "body": {
+      "en": "I build LLM applications and data pipelines that run in production. That's why the video work is organized like engineering: defined steps, consistent output, nothing left to chance.",
+      "pt": "Construo aplicações com LLMs e pipelines de dados que rodam em produção. Por isso o trabalho com vídeo é organizado como engenharia: etapas definidas, resultado consistente, nada deixado ao acaso."
+    },
+    "cta": {"en": "See the main portfolio", "pt": "Ver o portfólio principal"}
+  },
+
+  "contact": {
+    "label": {"en": "Contact", "pt": "Contato"},
+    "title": {"en": "Have a series, an ad or a launch that needs video?", "pt": "Tem uma série, um comercial ou um lançamento que precisa de vídeo?"},
+    "body": {
+      "en": "Tell me what you're making, the format and the deadline. I'm open to freelance projects and roles in AI video production.",
+      "pt": "Me conte o que você está fazendo, o formato e o prazo. Estou aberta a freelas e vagas em produção de vídeo com IA."
+    }
+  }
+}

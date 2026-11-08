@@ -1,0 +1,11 @@
+# Raw source files (huge: zips, original videos, PSDs). Keep locally / in Drive.
+source-materials/
+
+# Build output (GitHub Actions rebuilds it on every push)
+dist/
+
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+Thumbs.db

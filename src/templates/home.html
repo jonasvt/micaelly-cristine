@@ -1,0 +1,193 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+
+{# RULES: glanceable (numbers, visuals, one-line results, no paragraphs). No mention of AI video. #}
+
+{% block body_class %}page-home{% endblock %}
+
+{% block head %}
+<script type="application/ld+json">
+{{ {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": site.full_name,
+  "alternateName": site.name,
+  "jobTitle": (c.hero.eyebrow | t),
+  "url": canonical,
+  "email": "mailto:" ~ site.email,
+  "address": {"@type": "PostalAddress", "addressCountry": "BR"},
+  "alumniOf": [
+    {"@type": "CollegeOrUniversity", "name": "Universidade de São Paulo"},
+    {"@type": "CollegeOrUniversity", "name": "Universidade Federal de Mato Grosso"}
+  ],
+  "knowsLanguage": ["pt-BR", "en"],
+  "sameAs": [site.links.linkedin, site.links.github]
+} | tojson }}
+</script>
+{% endblock %}
+
+{% block nav %}
+<li><a href="#work">{{ ui.nav.work | t }}</a></li>
+<li><a href="#experience">{{ ui.nav.experience | t }}</a></li>
+<li><a class="site-nav__cta" href="#contact">{{ ui.nav.contact | t }}</a></li>
+{% endblock %}
+
+{% block main %}
+{# ------------------------------------------------------------------ HERO #}
+<section class="hero container" aria-labelledby="hero-title">
+  <div class="hero__grid">
+  <div class="hero__text">
+  <p class="eyebrow intro">
+    {{ c.hero.eyebrow | t }}
+    <span class="eyebrow__sep" aria-hidden="true">·</span>
+    {{ site.location | t }}
+  </p>
+  <h1 id="hero-title" class="hero__title intro">
+    {{ c.hero.title_pre | t }} <em>{{ c.hero.title_em | t }}</em>
+  </h1>
+  <p class="hero__lead hero__lead--tags intro">{{ c.hero.lead | t }}</p>
+  <div class="hero__actions intro">
+    <a class="btn btn--primary" href="#work">{{ c.hero.cta_primary | t }} <span aria-hidden="true">↓</span></a>
+    <a class="btn btn--ghost" href="#contact">{{ c.hero.cta_secondary | t }}</a>
+    {% if site.available %}
+    <p class="status"><span class="status__dot" aria-hidden="true"></span>{{ ui.available | t }}</p>
+    {% endif %}
+  </div>
+  </div>
+  <figure class="hero__portrait intro">
+    <img src="{{ root }}static/media/img/mica-illustration.webp" alt="{{ c.about.image_alt | t }}" width="640" height="800" fetchpriority="high" decoding="async">
+  </figure>
+  </div>
+
+  <dl class="proof intro">
+    {% for p in c.proof %}
+    <div class="proof__item">
+      <dt class="proof__value">{{ p.value }}</dt>
+      <dd class="proof__label">{{ p.label | t }}</dd>
+    </div>
+    {% endfor %}
+  </dl>
+</section>
+
+{# ------------------------------------------------------------------ WORK #}
+<section id="work" class="section container" aria-labelledby="work-title">
+  {{ m.section_head(c.work.label, c.work.title, "work-title") }}
+
+  <div class="cases">
+    {% for p in c.work.projects %}
+    <article class="case reveal" id="project-{{ p.id }}" aria-labelledby="case-{{ p.id }}">
+      <div class="case__visual">
+        {% if p.visual == "citation" %}
+          <figure class="citation">
+            <p class="citation__kicker">{{ p.citation.meta | t }}</p>
+            <blockquote class="citation__title" lang="pt-BR">{{ p.citation.title }}</blockquote>
+            <figcaption class="citation__author">{{ p.citation.author }}</figcaption>
+            <p class="citation__data"><span>Random Forest</span><span>{{ p.citation.data }}</span></p>
+          </figure>
+        {% elif p.visual == "terminal" %}
+          <div class="terminal" role="img" aria-label="{{ 'Saída do programa: 19 aprovados, 11 bloqueados, 30 verificados; 22 testes passando' if lang == 'pt' else 'Program output: 19 passed, 11 blocked, 30 checked; 22 tests passing' }}">
+            <div class="terminal__bar" aria-hidden="true"><span></span><span></span><span></span></div>
+            <div class="terminal__body" aria-hidden="true">
+              {% for line in p.terminal %}
+                {% if line.t == "cmd" %}<p class="t-cmd"><span class="t-prompt">$</span> {{ line.text }}</p>
+                {% elif line.t == "dim" %}<p class="t-dim">{{ line.text }}</p>
+                {% elif line.t == "row" %}<p class="t-row"><span>{{ line.id }}</span><span class="t-client">{{ line.client }}</span><span class="{{ 't-pass' if line.ok else 't-block' }}">{{ 'PASS' if line.ok else 'BLOCKED' }}</span><span class="t-reason">{{ line.reason }}</span></p>
+                {% elif line.t == "sum" %}<p class="t-sum">{{ line.text }}</p>
+                {% elif line.t == "ok" %}<p class="t-ok">{{ line.text }}</p>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        {% elif p.visual == "pipeline" %}
+          <div class="pipeline" role="img" aria-label="{% for s in p.pipeline %}{{ s | t }}{{ ' → ' if not loop.last }}{% endfor %}. {{ p.schedule | t }}">
+            <ol class="pipeline__steps" aria-hidden="true">
+              {% for s in p.pipeline %}
+              <li class="pipeline__step"><span class="pipeline__n">{{ "%02d" | format(loop.index) }}</span>{{ s | t }}</li>
+              {% endfor %}
+            </ol>
+            <p class="pipeline__schedule" aria-hidden="true"><span class="pipeline__clock"></span>{{ p.schedule | t }}</p>
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="case__body">
+        <p class="case__kicker">{{ p.kicker | t }}</p>
+        <h3 id="case-{{ p.id }}" class="case__title">{{ p.title | t }}</h3>
+        <ul class="chips" role="list">
+          {% for s in p.stack %}<li>{{ s }}</li>{% endfor %}
+        </ul>
+        <p class="case__links">
+          {% for l in p.links %}
+            {% if l.page is defined %}
+              <a class="btn btn--primary btn--sm" href="{{ link(l.page) }}">{{ l.label | t }} <span aria-hidden="true">→</span></a>
+            {% else %}
+              {{ m.ext(l.href, l.label | t) }}
+            {% endif %}
+          {% endfor %}
+        </p>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+
+  <div class="more reveal">
+    <h3 class="more__title">{{ c.work.more_title | t }}</h3>
+    <ul class="more__grid" role="list">
+      {% for r in c.work.more %}
+      <li>
+        <a class="more__card" href="{{ r.href }}" target="_blank" rel="noopener">
+          <span class="more__name">{{ r.name | t }}</span>
+          <span class="more__stack">{{ r.stack }}</span>
+          <span class="more__arrow" aria-hidden="true">↗</span>
+          <span class="visually-hidden">({{ ui.external | t }})</span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    <p class="more__all">{{ m.ext(site.links.github, c.work.all_repos | t) }}</p>
+  </div>
+</section>
+
+{# ------------------------------------------------------------ EXPERIENCE #}
+<section id="experience" class="section container" aria-labelledby="exp-title">
+  {{ m.section_head(c.experience.label, c.experience.title, "exp-title") }}
+  <ol class="jobs">
+    {% for x in c.experience["items"] %}
+    <li class="jobs__item reveal">
+      <p class="jobs__dates">{{ x.dates | t }}</p>
+      <h3 class="jobs__role">{{ x.role | t }} <span class="jobs__company">· {{ x.company | t }}</span></h3>
+      <p class="jobs__result">{{ x.result | t }}</p>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+
+{# ---------------------------------------------------- SKILLS + EDUCATION #}
+<section id="skills" class="section container" aria-labelledby="skills-title">
+  <div class="split">
+    <div class="reveal">
+      <p class="section-head__label"><span class="section-head__num" aria-hidden="true">✦</span><span id="skills-title">{{ c.skills.label | t }}</span></p>
+      <dl class="skillset">
+        {% for g in c.skills.groups %}
+        <div class="skillset__row">
+          <dt>{{ g.name | t }}</dt>
+          <dd><ul class="chips" role="list">{% for s in g["items"] %}<li>{{ s }}</li>{% endfor %}</ul></dd>
+        </div>
+        {% endfor %}
+      </dl>
+    </div>
+    <div class="reveal">
+      <p class="section-head__label"><span class="section-head__num" aria-hidden="true">✦</span>{{ c.education.label | t }}</p>
+      <ol class="edu-list">
+        {% for e in c.education["items"] %}
+        <li><span class="edu-list__degree">{{ e.degree | t }}</span><span class="edu-list__school">{{ e.school }} · {{ e.dates }}</span></li>
+        {% endfor %}
+      </ol>
+      <p class="edu-list__langs">{{ c.education.langs | t }}</p>
+    </div>
+  </div>
+</section>
+
+{# --------------------------------------------------------------- CONTACT #}
+{{ m.contact_block(c.contact) }}
+{% endblock %}

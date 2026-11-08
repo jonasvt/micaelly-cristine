@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% import "macros.html" as m with context %}
+
+{# RULES: video and results only. No explanatory paragraphs. No mention of the data-science portfolio.
+   Order: her header → numbers → anime dramas (main work) → cinematic ad → tools → contact. #}
+
+{% block body_class %}page-ai theme-dark{% endblock %}
+
+{% block nav %}
+<li><a href="#series">{{ ui.nav.series | t }}</a></li>
+<li><a href="#cinematic">{{ ui.nav.cinematic | t }}</a></li>
+<li><a href="#tools">{{ ui.nav.tools | t }}</a></li>
+<li><a class="site-nav__cta" href="#contact">{{ ui.nav.contact | t }}</a></li>
+{% endblock %}
+
+{% block main %}
+{# ------------------------------------------------------------------ HERO #}
+<section class="aihero container" aria-labelledby="hero-title">
+  <div class="aihero__text">
+    <p class="aihero__eyebrow intro">
+      <img class="aihero__avatar" src="{{ root }}static/media/img/mica-illustration.webp" alt="" width="640" height="800" decoding="async">
+      <span><span class="section-head__num" aria-hidden="true">✦</span> {{ c.hero.eyebrow | t }}</span>
+    </p>
+    <h1 id="hero-title" class="aihero__name intro">{{ site.name }}</h1>
+    <p class="aihero__tagline intro">{{ c.hero.tagline | t }}</p>
+    <div class="hero__actions intro">
+      <a class="btn btn--primary" href="#series">{{ c.hero.cta_primary | t }} <span aria-hidden="true">↓</span></a>
+      <a class="btn btn--ghost" href="#contact">{{ c.hero.cta_secondary | t }}</a>
+    </div>
+  </div>
+  {# Animated poster fan: deals in on load, then rotates; the card in the centre
+     plays a tiny muted preview (<slug>-preview.mp4). Logic in site.js → initFan. #}
+  <a class="fan" href="#series" tabindex="-1" aria-hidden="true" data-fan>
+    {% for slug in c.hero.fan %}
+    <span class="fan__card" style="--pos: {{ loop.index0 }}; --seed: {{ loop.index0 }}" data-fan-card>
+      <span class="fan__inner">
+        <img src="{{ root }}static/media/video/{{ slug }}.webp" alt="" width="540" height="960" decoding="async">
+        <video class="fan__video" data-src="{{ root }}static/media/video/{{ slug }}-preview.mp4" muted loop playsinline preload="none"></video>
+      </span>
+    </span>
+    {% endfor %}
+  </a>
+</section>
+
+<dl class="proof proof--ai container reveal">
+  {% for s in c.stats %}
+  <div class="proof__item">
+    <dt class="proof__value">{{ s.value }}</dt>
+    <dd class="proof__label">{{ s.label | t }}</dd>
+  </div>
+  {% endfor %}
+</dl>
+
+{# ---------------------------------------------------------------- SERIES #}
+<section id="series" class="section container" aria-labelledby="series-title">
+  {{ m.section_head(c.series.label, c.series.title, "series-title") }}
+  <ul class="reel" role="list">
+    {% for v in c.series["items"] %}
+    <li class="reel__item reveal">
+      <article class="clip" aria-labelledby="clip-{{ v.slug }}">
+        {{ m.video(v.slug, v.alt | t, v.title) }}
+        <div class="clip__body">
+          <h3 id="clip-{{ v.slug }}" class="clip__title">{{ v.title }}</h3>
+          <p class="clip__tag">{{ v.tag | t }}</p>
+        </div>
+      </article>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+{# ------------------------------------------------------------- CINEMATIC #}
+<section id="cinematic" class="section container" aria-labelledby="cinematic-title">
+  {{ m.section_head(c.featured.section_label, c.featured.title, "cinematic-title") }}
+  <div class="reveal">
+    {{ m.video(c.featured.slug, c.featured.poster_alt | t, c.featured.title | t, kind="landscape", autoplay=true) }}
+  </div>
+  <div class="caption-row reveal">
+    <p class="case__kicker">{{ c.featured.label | t }}</p>
+    <p class="caption-row__facts">
+      {% for f in c.featured.facts %}<span>{{ f.v | t }}</span>{% endfor %}
+    </p>
+  </div>
+</section>
+
+{# --------------------------------------------------------------- TOOLKIT #}
+<section id="tools" class="section container" aria-labelledby="tools-title">
+  {{ m.section_head(c.toolkit.label, c.toolkit.title, "tools-title") }}
+  <div class="toolwall">
+    {% for g in c.toolkit.groups %}
+    <div class="toolwall__group reveal">
+      <h3 class="toolwall__name">{{ g.name | t }}</h3>
+      <ul class="toolwall__list" role="list">
+        {% for x in g.tools %}<li>{{ x }}</li>{% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{{ m.contact_block(c.contact) }}
+{% endblock %}

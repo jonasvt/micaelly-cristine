@@ -1,0 +1,105 @@
+{
+  "_comment": "Small interface strings shared by every page.",
+  "skip": {
+    "en": "Skip to content",
+    "pt": "Pular para o conteúdo"
+  },
+  "nav": {
+    "work": {
+      "en": "Work",
+      "pt": "Projetos"
+    },
+    "experience": {
+      "en": "Experience",
+      "pt": "Experiência"
+    },
+    "about": {
+      "en": "About",
+      "pt": "Sobre"
+    },
+    "contact": {
+      "en": "Contact",
+      "pt": "Contato"
+    },
+    "series": {
+      "en": "Series",
+      "pt": "Séries"
+    },
+    "tools": {
+      "en": "Tools",
+      "pt": "Ferramentas"
+    },
+    "cinematic": {
+      "en": "Cinematic",
+      "pt": "Cinematográfico"
+    }
+  },
+  "lang_label": {
+    "en": "Language",
+    "pt": "Idioma"
+  },
+  "lang_names": {
+    "en": "English",
+    "pt": "Português"
+  },
+  "available": {
+    "en": "Open to remote opportunities",
+    "pt": "Aberta a oportunidades remotas"
+  },
+  "role": {
+    "en": "Role",
+    "pt": "Papel"
+  },
+  "stack": {
+    "en": "Stack",
+    "pt": "Tecnologias"
+  },
+  "tools": {
+    "en": "Tools",
+    "pt": "Ferramentas"
+  },
+  "focus": {
+    "en": "Focus",
+    "pt": "Foco"
+  },
+  "what_i_did": {
+    "en": "What I did",
+    "pt": "O que eu fiz"
+  },
+  "format": {
+    "en": "Format",
+    "pt": "Formato"
+  },
+  "play": {
+    "en": "Play",
+    "pt": "Assistir"
+  },
+  "play_with_sound": {
+    "en": "Play with sound",
+    "pt": "Assistir com som"
+  },
+  "sound_on": {
+    "en": "Sound on",
+    "pt": "Ativar som"
+  },
+  "external": {
+    "en": "opens in a new tab",
+    "pt": "abre em nova aba"
+  },
+  "back_to_top": {
+    "en": "Back to top",
+    "pt": "Voltar ao topo"
+  },
+  "not_found_title": {
+    "en": "Page not found",
+    "pt": "Página não encontrada"
+  },
+  "not_found_body": {
+    "en": "This page doesn't exist.",
+    "pt": "Esta página não existe."
+  },
+  "not_found_cta": {
+    "en": "Go to the home page",
+    "pt": "Ir para o início"
+  }
+}

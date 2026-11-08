@@ -1,0 +1,24 @@
+{
+  "_comment": "Global settings. site_url must be the final public address (used for canonical URLs, Open Graph and the sitemap). Change it when the domain changes.",
+
+  "site_url": "https://jonasvt.github.io/micaelly-cristine/",
+  "custom_domain": "",
+  "ai_page_indexable": false,
+  "available": true,
+
+  "name": "Micaelly Cristine",
+  "full_name": "Micaelly Cristine de Moura Santos",
+  "initials": "MC",
+  "location": {"en": "Brazil", "pt": "Brasil"},
+
+  "email": "micaellycristine01@gmail.com",
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/micaelly-cristine/",
+    "github": "https://github.com/Micaelly2222"
+  },
+
+  "og": {
+    "home": "static/og/og-home.png",
+    "ai": "static/og/og-ai-video.png"
+  }
+}

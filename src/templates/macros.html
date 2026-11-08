@@ -1,0 +1,53 @@
+{# Reusable pieces. Imported "with context" so they can use lang, ui, site, root. #}
+
+{% macro section_head(label, title, id) %}
+<header class="section-head reveal">
+  <p class="section-head__label"><span class="section-head__num" aria-hidden="true">✦</span>{{ label | t }}</p>
+  <h2 id="{{ id }}" class="section-head__title">{{ title | t }}</h2>
+</header>
+{% endmacro %}
+
+{% macro ext(href, label) %}
+<a class="link-arrow" href="{{ href }}" target="_blank" rel="noopener">{{ label }} <span aria-hidden="true">↗</span><span class="visually-hidden"> ({{ ui.external | t }})</span></a>
+{% endmacro %}
+
+{% macro contact_block(data, image=false, image_alt="") %}
+<section id="contact" class="section contact container" aria-labelledby="contact-title">
+  <div class="contact__grid">
+    <div>
+      <p class="section-head__label reveal"><span class="section-head__num" aria-hidden="true">✦</span>{{ data.label | t }}</p>
+      <h2 id="contact-title" class="contact__title reveal">{{ data.title | t }}</h2>
+      <p class="contact__email reveal"><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      <ul class="contact__links reveal">
+        <li>{{ ext(site.links.linkedin, "LinkedIn") }}</li>
+        <li>{{ ext(site.links.github, "GitHub") }}</li>
+      </ul>
+    </div>
+    {% if image %}
+    <figure class="contact__figure reveal">
+      <img src="{{ root }}static/media/img/mica-illustration.webp" alt="{{ image_alt }}" width="640" height="800" loading="lazy" decoding="async">
+    </figure>
+    {% endif %}
+  </div>
+</section>
+{% endmacro %}
+
+{# A click-to-play video. The <video> has no src until the user asks for it
+   (data-src), so nothing is downloaded on page load. #}
+{% macro video(slug, alt, name, kind="vertical", autoplay=false) %}
+{% set w, h = (1280, 712) if kind == "landscape" else (720, 1280) %}
+<div class="player player--{{ kind }}" data-player{% if autoplay %} data-autoplay{% endif %}>
+  <video class="player__video"
+         data-src="{{ root }}static/media/video/{{ slug }}.mp4"
+         poster="{{ root }}static/media/video/{{ slug }}.webp"
+         width="{{ w }}" height="{{ h }}"
+         preload="none" playsinline
+         {% if autoplay %}muted loop{% endif %}
+         aria-label="{{ alt }}"></video>
+  <button class="player__btn" type="button" data-play>
+    <span class="player__icon" aria-hidden="true"></span>
+    <span class="player__label">{{ (ui.play_with_sound if autoplay else ui.play) | t }}</span>
+    <span class="visually-hidden">: {{ name }}</span>
+  </button>
+</div>
+{% endmacro %}

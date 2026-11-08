@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="{{ 'pt-BR' if lang == 'pt' else 'en' }}" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ c.meta.title | t }}</title>
+  <meta name="description" content="{{ c.meta.description | t }}">
+  <meta name="author" content="{{ site.name }}">
+  {% if page == 'ai' and not site.ai_page_indexable %}
+  <meta name="robots" content="noindex">
+  {% endif %}
+  <link rel="canonical" href="{{ canonical }}">
+  {% for l, href in alternates.items() %}
+  <link rel="alternate" hreflang="{{ 'pt-BR' if l == 'pt' else 'en' }}" href="{{ href }}">
+  {% endfor %}
+  <link rel="alternate" hreflang="x-default" href="{{ alternates['en'] }}">
+
+  <meta property="og:type" content="{{ 'profile' if page == 'home' else 'website' }}">
+  <meta property="og:site_name" content="{{ site.name }}">
+  <meta property="og:title" content="{{ c.meta.title | t }}">
+  <meta property="og:description" content="{{ c.meta.description | t }}">
+  <meta property="og:url" content="{{ canonical }}">
+  <meta property="og:image" content="{{ site.site_url }}{{ site.og[page] }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="{{ 'pt_BR' if lang == 'pt' else 'en_US' }}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <meta name="theme-color" content="{{ '#121010' if page == 'ai' else '#fbf6ef' }}">
+  <link rel="icon" href="{{ root }}static/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="{{ root }}static/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="{{ root }}static/apple-touch-icon.png">
+
+  <link rel="preload" href="{{ root }}static/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ root }}static/fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="{{ root }}static/css/site.css">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+  {% block head %}{% endblock %}
+</head>
+<body class="{% block body_class %}{% endblock %}">
+  <a class="skip-link" href="#main">{{ ui.skip | t }}</a>
+
+  <header class="site-header" data-header>
+    <div class="container site-header__inner">
+      {# The two pages are independent: on the AI page the wordmark goes to its own top, never to the data portfolio. #}
+      <a class="wordmark" href="{{ '#main' if page == 'ai' else link('home') }}" aria-label="{{ site.name }}">
+        <span class="wordmark__mark" aria-hidden="true">✦</span>
+        <span class="wordmark__name">{{ site.name }}</span>
+      </a>
+      <nav class="site-nav" aria-label="{{ 'Principal' if lang == 'pt' else 'Main' }}">
+        <ul class="site-nav__list">
+          {% block nav %}{% endblock %}
+        </ul>
+        <div class="lang-switch" role="group" aria-label="{{ ui.lang_label | t }}">
+          {% for l, href in lang_links.items() %}
+            {% if l == lang %}
+            <span class="lang-switch__item is-current" aria-current="true" lang="{{ 'pt-BR' if l == 'pt' else 'en' }}">{{ l | upper }}</span>
+            {% else %}
+            <a class="lang-switch__item" href="{{ href }}" hreflang="{{ 'pt-BR' if l == 'pt' else 'en' }}" lang="{{ 'pt-BR' if l == 'pt' else 'en' }}" aria-label="{{ ui.lang_names[l] }}">{{ l | upper }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    {% block main %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>© {{ year }} {{ site.name }} · {{ site.location | t }}</p>
+      <a class="site-footer__top" href="#main">{{ ui.back_to_top | t }} ↑</a>
+    </div>
+  </footer>
+
+  <script src="{{ root }}static/js/site.js" defer></script>
+</body>
+</html>
