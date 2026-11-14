@@ -1,8 +1,8 @@
 {
   "_comment": "Global settings. site_url must be the final public address (used for canonical URLs, Open Graph and the sitemap). Change it when the domain changes.",
 
-  "site_url": "https://jonasvt.github.io/micaelly-cristine/",
-  "custom_domain": "",
+  "site_url": "https://micaellycristine.com/",
+  "custom_domain": "micaellycristine.com",
   "ai_page_indexable": false,
   "available": true,
 
