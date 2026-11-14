@@ -7,7 +7,8 @@ Os textos que o site usa estão em `content/*.json` (fonte da verdade). Este arq
 ## Página principal (`content/home.json`) — Data Scientist & AI Engineer
 - **Frase:** "AI and data systems that **hold up in production.**" / "Sistemas de dados e IA que **funcionam em produção.**"
 - **Números:** 4+ anos em dados e IA · ~8M cooperados atendidos pelos pipelines · USP (MBA + artigo) · 8 empresas e órgãos públicos.
-- **Projetos:** pesquisa publicada (LRF + Random Forest) · Kāsper Production Gate · pipeline YouTube/Airflow · 5 cartões "Mais no GitHub".
+- **Projetos:** assistente jurídico com RAG · lakehouse de crédito no Databricks · análise de processos com ML · pesquisa publicada (LRF + Random Forest) · 5 cartões "Mais no GitHub" (painel de crédito, gate de briefings, pipeline do YouTube, cafeteria, calculadora Azure).
+- **Formação:** inclui a certificação Azure Fundamentals (AZ-900).
 - **Experiência:** 8 empregos, uma linha cada.
 - **Competências** (IA, Dados, ML & BI, Backend) + **formação**.
 - **Contato.**

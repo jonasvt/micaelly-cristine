@@ -46,7 +46,7 @@ Referência de estilo: https://minimalio.org/video-portfolio-website-8-minimalis
 ## Revisão como recrutador (feita e aplicada)
 
 **Recrutador 1 — vaga de dados/IA.**
-Impressiona: Prysmo com LLM/RAG em produção, ~8M de cooperados, USP + artigo. Dúvida: muitos empregos curtos → mitigado mostrando resultado por linha, sem destacar duração. Corrigido: o projeto com README exagerado (`projeto-machine-learning-ia`) saiu.
+Impressiona: Prysmo com LLM/RAG em produção, ~8M de cooperados, USP + artigo. Dúvida: muitos empregos curtos → mitigado mostrando resultado por linha, sem destacar duração. Em nov/2026 o `projeto-machine-learning-ia` foi refeito com ML de verdade e voltou, junto com o RAG jurídico e o lakehouse no Databricks.
 
 **Recrutador 2 — vaga criativa.**
 Impressiona: volume e consistência visual, capas com lettering. Dúvida: "ela criou as histórias?" → o site não afirma roteiro; os textos longos (docs) explicam que é adaptação.

@@ -20,6 +20,7 @@
     {"@type": "CollegeOrUniversity", "name": "Universidade de São Paulo"},
     {"@type": "CollegeOrUniversity", "name": "Universidade Federal de Mato Grosso"}
   ],
+  "hasCredential": {"@type": "EducationalOccupationalCredential", "name": "Microsoft Certified: Azure Fundamentals (AZ-900)", "credentialCategory": "certification", "recognizedBy": {"@type": "Organization", "name": "Microsoft"}},
   "knowsLanguage": ["pt-BR", "en"],
   "sameAs": [site.links.linkedin, site.links.github]
 } | tojson }}
@@ -107,6 +108,25 @@
             </ol>
             <p class="pipeline__schedule" aria-hidden="true"><span class="pipeline__clock"></span>{{ p.schedule | t }}</p>
           </div>
+        {% elif p.visual == "qa" %}
+          <div class="qa">
+            <p class="qa__question">{{ p.qa.question | t }}</p>
+            <p class="qa__source"><span class="qa__law">{{ p.qa.source }}</span><span class="qa__check"><span aria-hidden="true">✓</span> {{ p.qa.checked | t }}</span></p>
+            <dl class="stats">
+              {% for s in p.qa.metrics %}
+              <div class="stats__item"><dt class="stats__label">{{ s.label | t }}</dt><dd class="stats__value">{{ s.value }}</dd></div>
+              {% endfor %}
+            </dl>
+          </div>
+        {% elif p.visual == "metrics" %}
+          <div class="metrics">
+            <dl class="stats stats--big">
+              {% for s in p.metrics %}
+              <div class="stats__item"><dt class="stats__label">{{ s.label | t }}</dt><dd class="stats__value">{{ s.value }}</dd></div>
+              {% endfor %}
+            </dl>
+            <p class="metrics__note">{{ p.metrics_note | t }}</p>
+          </div>
         {% endif %}
       </div>
 
@@ -180,7 +200,7 @@
       <p class="section-head__label"><span class="section-head__num" aria-hidden="true">✦</span>{{ c.education.label | t }}</p>
       <ol class="edu-list">
         {% for e in c.education["items"] %}
-        <li><span class="edu-list__degree">{{ e.degree | t }}</span><span class="edu-list__school">{{ e.school }} · {{ e.dates }}</span></li>
+        <li><span class="edu-list__degree">{{ e.degree | t }}</span><span class="edu-list__school">{{ e.school }}{% if e.dates is defined %} · {{ e.dates }}{% endif %}</span></li>
         {% endfor %}
       </ol>
       <p class="edu-list__langs">{{ c.education.langs | t }}</p>

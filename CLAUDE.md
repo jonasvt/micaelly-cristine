@@ -20,7 +20,7 @@ Site pessoal da **Micaelly Cristine** ("Mica"), feito pelo Jonas (parceiro dela)
 2. **Pouquíssimo texto.** A Mica odeia ler demais. Site = vídeo, imagens, números e títulos de uma linha. Nada de parágrafos explicativos, loglines ou "sobre mim" longo. Textos longos ficam em `docs/_long-copy-*.json`.
 3. Os episódios da AnimePocky são **adaptações em anime de dramas live-action** (áudio/diálogo originais). Não dizer que ela escreveu as histórias nem que fez as vozes.
 4. O nome do jogo do comercial **não aparece** (não anunciado).
-5. Não mostrar o repo `projeto-machine-learning-ia` (README promete mais que o código entrega).
+5. Projetos em destaque (nov/2026): RAG jurídico, lakehouse Databricks, análise de processos com ML e artigo publicado. Os números de cada card vêm dos READMEs e relatórios dos repos (ver `docs/FACTS.md`).
 7. **As duas páginas são independentes:** a página principal nunca menciona vídeo/IA criativa e a `/ai-video-creator/` nunca menciona o portfólio de dados (nem link, nem texto, nem o nome do topo).
 8. **Escrita sem cara de IA:** nada de travessão (— ou –) em texto do site; use ponto, vírgula, dois-pontos ou "·". Datas com hífen simples (2024-2025) ou "Since/Desde 2026". Evitar frases de efeito, trios de palavras ("Built, shipped, published."), trocadilhos e palavras de marketing (seamless, passionate, leverage, cutting-edge, elevate, unlock, journey). Frases curtas e diretas, como uma pessoa escreveria.
 6. Inglês é o idioma padrão e o site **sempre abre em inglês** (`/`); português só em `/pt/`, pelo botão PT. Nunca redirecionar pelo idioma do navegador. Toda mudança de texto precisa das duas línguas, com tradução natural.

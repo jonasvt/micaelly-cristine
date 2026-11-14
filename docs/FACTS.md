@@ -46,6 +46,7 @@ Auditoria feita em 08/11/2026.
 - Análise e Desenvolvimento de Sistemas — UniFCV (mar/2022 – abr/2024; portfólio antigo: jun/2024).
 - Ciências Econômicas — UFMT (2016–2020).
 - Certificações (LinkedIn, sem emissor informado): Programming for Everybody; Python Fundamentos para Análise de Dados; Docker; Scraping com Python; Introdução à Virtualização de Dados – Denodo.
+- **Microsoft Certified: Azure Fundamentals (AZ-900)**: pedido da própria Mica (mensagem ao Jonas, 08/11/2026). Ano de emissão não informado, por isso o site não mostra data.
 
 ### Pesquisa
 - Artigo: "Previsão do Cumprimento da Lei de Responsabilidade Fiscal por Municípios do Mato Grosso utilizando Random Forest" (LinkedIn → Publications; README do repo `tcc_data_science`).
@@ -53,10 +54,15 @@ Auditoria feita em 08/11/2026.
 - Dados IBGE + TCE-MT, 2017–2022 (README).
 
 ### Projetos do GitHub em destaque
-- `kasper-production-gate` (out/2026): exercício técnico para uma agência; 30 briefings → 19 PASS / 11 BLOCKED; 22 testes; sem custo de LLM (README e NOTES.md do repo).
+Atualizado em 14/11/2026, a pedido da Mica (comparar os 4 repos novos com os atuais). Números tirados dos READMEs e relatórios; CI verde nos 4.
+- `assistente-juridico-rag`: RAG sobre LGPD, CDC e Marco Civil; BM25 + embeddings (RRF) + agente com ferramentas (Claude API); 30 perguntas de avaliação; híbrida Recall@5 0,90, MRR@10 0,78 (`reports/retrieval_eval.md`); 12 testes. Demo: https://assistente-juridico-rag.streamlit.app (Streamlit Cloud, dorme sem uso). Exemplo do card: "O que a lei considera dado pessoal sensível?" → LGPD Art. 5º, II (`data/eval_questions.json`).
+- `databricks-lakehouse-credito`: medalhão bronze/silver/gold + checagem de qualidade no Databricks (Delta Lake, Unity Catalog, Asset Bundles, Workflows); 11 séries do Banco Central (SGS); 5.505 linhas na execução completa; job agendado nos dias 6 e 21 (`resources/credit_lakehouse.job.yml`); 10 testes.
+- `projeto-machine-learning-ia` (refeito em nov/2026): classificador TF-IDF + Regressão Logística (scikit-learn) de 9 tipos de documento; 0,87 de acurácia em validação cruzada agrupada por template; 12/12 casos de referência corretos; 31 testes; 1.350 documentos **sintéticos** (o card diz isso). Demo: https://legal-case-analyzer-ml.streamlit.app (dorme sem uso).
+- `dashboard-credito-brasil` (em "Mais no GitHub"): painel ao vivo em https://micaelly2222.github.io/dashboard-credito-brasil/ ; DuckDB, SQL, Power BI/DAX; atualização automática pelo GitHub Actions.
+- `kasper-production-gate` (out/2026, agora em "Mais no GitHub"): exercício técnico para uma agência; 30 briefings → 19 PASS / 11 BLOCKED; 22 testes. O selo "$0 LLM cost" saiu a pedido da Mica (14/11/2026).
 - `extracao_e_analise_de_dados_do_youtube`: API do YouTube + Pandas + DAG do Airflow diária às 01:30 + SQL de KPIs.
-- `tcc_data_science`, `sistema_gerenciamento_python_flask`, `API_gestao_empresa`, `estudos_orm_index`, `contador_tags`, `calculadora_python_azure_functions`.
-- **Fora do site de propósito:** `projeto-machine-learning-ia` — o README fala em ML, mas o código classifica por palavras-chave. Mostrar isso a um recrutador técnico seria arriscado.
+- `tcc_data_science`, `sistema_gerenciamento_python_flask`, `API_gestao_empresa`, `calculadora_python_azure_functions`.
+- Saíram de "Mais no GitHub" em 14/11/2026 (mais fracos que os novos): `estudos_orm_index`, `contador_tags`, `API_gestao_empresa` (continua no GitHub, só não tem cartão).
 
 ### Vídeo com IA
 - 121 episódios, 27 séries, formato 9:16 (720×1280, alguns 1080×1920 60 fps). Contagem feita nos arquivos.

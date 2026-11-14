@@ -263,6 +263,19 @@ main:focus-visible { outline: none; }
 .pipeline__clock { width: 12px; height: 12px; border-radius: 50%; border: 1.5px solid var(--accent); position: relative; }
 .pipeline__clock::after { content: ""; position: absolute; left: 4.5px; top: 1.5px; width: 1.5px; height: 4px; background: var(--accent); }
 
+/* Visual: question + cited source (RAG) and big numbers (ML). Shared number row: .stats */
+.qa, .metrics { border-radius: var(--r-lg); border: 1px solid var(--line); background: var(--surface); padding: clamp(24px, 4vw, 44px); display: grid; gap: var(--s-5); }
+.qa__question { justify-self: start; max-width: 30ch; padding: 14px 18px; border-radius: var(--r) var(--r) var(--r) 4px; background: var(--surface-2); font-size: var(--fs-md); font-weight: 500; line-height: 1.4; }
+.qa__source { justify-self: end; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.qa__law { padding: 10px 14px; border: 1px solid var(--line-strong); border-radius: var(--r); background: var(--bg); font-weight: 600; }
+.qa__check { font-size: var(--fs-xs); font-weight: 600; color: var(--ok); }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s-4); }
+.stats__item { display: flex; flex-direction: column-reverse; justify-content: flex-end; gap: 6px; border-top: 1px solid var(--line-strong); padding-top: var(--s-3); min-width: 0; }
+.stats__value { font-family: var(--font-display); font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 96; font-weight: 600; font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.25rem); line-height: 1; letter-spacing: -0.03em; }
+.stats__label { font-size: var(--fs-xs); color: var(--ink-2); line-height: 1.35; }
+.stats--big .stats__value { font-size: var(--fs-num); }
+.metrics__note { justify-self: start; font-size: var(--fs-xs); color: var(--ink-2); padding: 8px 12px; border-radius: var(--r-pill); background: var(--accent-soft); }
+
 /* More on GitHub — small cards */
 .more { margin-top: clamp(72px, 9vw, 120px); }
 .more__title { font-size: var(--fs-md); font-weight: 500; margin-bottom: var(--s-4); }

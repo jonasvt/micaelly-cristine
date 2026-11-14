@@ -77,6 +77,181 @@
     },
     "projects": [
       {
+        "id": "rag",
+        "visual": "qa",
+        "kicker": {
+          "en": "AI engineering · RAG · Agents",
+          "pt": "Engenharia de IA · RAG · Agentes"
+        },
+        "title": {
+          "en": "Legal assistant that answers with the exact article of the law",
+          "pt": "Assistente jurídico que responde com o artigo exato da lei"
+        },
+        "stack": [
+          "Python",
+          "Claude API",
+          "BM25 + embeddings",
+          "Tool use",
+          "pytest"
+        ],
+        "qa": {
+          "question": {
+            "en": "What does the law consider sensitive personal data?",
+            "pt": "O que a lei considera dado pessoal sensível?"
+          },
+          "source": "LGPD · Art. 5º, II",
+          "checked": {
+            "en": "Citation checked",
+            "pt": "Citação verificada"
+          },
+          "metrics": [
+            {
+              "value": "0.90",
+              "label": "Recall@5"
+            },
+            {
+              "value": "0.78",
+              "label": "MRR@10"
+            },
+            {
+              "value": "30",
+              "label": {
+                "en": "test questions",
+                "pt": "perguntas de teste"
+              }
+            }
+          ]
+        },
+        "links": [
+          {
+            "label": {
+              "en": "Code",
+              "pt": "Código"
+            },
+            "href": "https://github.com/Micaelly2222/assistente-juridico-rag"
+          },
+          {
+            "label": {
+              "en": "Live demo",
+              "pt": "Demo online"
+            },
+            "href": "https://assistente-juridico-rag.streamlit.app"
+          }
+        ]
+      },
+      {
+        "id": "lakehouse",
+        "visual": "pipeline",
+        "kicker": {
+          "en": "Data engineering · Databricks",
+          "pt": "Engenharia de dados · Databricks"
+        },
+        "title": {
+          "en": "Credit lakehouse on Databricks with Central Bank data",
+          "pt": "Lakehouse de crédito no Databricks com dados do Banco Central"
+        },
+        "stack": [
+          "PySpark",
+          "Delta Lake",
+          "Unity Catalog",
+          "Asset Bundles",
+          "pytest"
+        ],
+        "pipeline": [
+          {
+            "en": "Bronze · raw API data",
+            "pt": "Bronze · dados brutos da API"
+          },
+          {
+            "en": "Silver · typed, MERGE, quarantine",
+            "pt": "Silver · tipado, MERGE, quarentena"
+          },
+          {
+            "en": "Gold · credit KPIs",
+            "pt": "Gold · KPIs de crédito"
+          },
+          {
+            "en": "Quality gate",
+            "pt": "Checagem de qualidade"
+          }
+        ],
+        "schedule": {
+          "en": "Databricks Workflows · runs on the 6th and 21st",
+          "pt": "Databricks Workflows · roda nos dias 6 e 21"
+        },
+        "links": [
+          {
+            "label": {
+              "en": "Code",
+              "pt": "Código"
+            },
+            "href": "https://github.com/Micaelly2222/databricks-lakehouse-credito"
+          }
+        ]
+      },
+      {
+        "id": "legal-ml",
+        "visual": "metrics",
+        "kicker": {
+          "en": "Machine learning · NLP",
+          "pt": "Machine learning · NLP"
+        },
+        "title": {
+          "en": "Court case analysis: ML classifies the documents, rules decide",
+          "pt": "Análise de processos: ML classifica os documentos, regras decidem"
+        },
+        "stack": [
+          "scikit-learn",
+          "TF-IDF",
+          "FastAPI",
+          "Claude API",
+          "Docker"
+        ],
+        "metrics": [
+          {
+            "value": "0.87",
+            "label": {
+              "en": "accuracy, grouped cross-validation",
+              "pt": "acurácia, validação cruzada agrupada"
+            }
+          },
+          {
+            "value": "12/12",
+            "label": {
+              "en": "reference cases decided right",
+              "pt": "casos de referência corretos"
+            }
+          },
+          {
+            "value": "31",
+            "label": {
+              "en": "automated tests",
+              "pt": "testes automatizados"
+            }
+          }
+        ],
+        "metrics_note": {
+          "en": "9 document types · 1,350 synthetic documents",
+          "pt": "9 tipos de documento · 1.350 documentos sintéticos"
+        },
+        "links": [
+          {
+            "label": {
+              "en": "Code",
+              "pt": "Código"
+            },
+            "href": "https://github.com/Micaelly2222/projeto-machine-learning-ia"
+          },
+          {
+            "label": {
+              "en": "Live demo",
+              "pt": "Demo online"
+            },
+            "href": "https://legal-case-analyzer-ml.streamlit.app"
+          }
+        ]
+      },
+      {
         "id": "research",
         "visual": "citation",
         "kicker": {
@@ -118,145 +293,6 @@
             "href": "https://doi.org/10.5281/zenodo.8159329"
           }
         ]
-      },
-      {
-        "id": "gate",
-        "visual": "terminal",
-        "kicker": {
-          "en": "Python · Automation · 2026",
-          "pt": "Python · Automação · 2026"
-        },
-        "title": {
-          "en": "A gate that blocks incomplete ad briefs before production",
-          "pt": "Um gate que barra briefings incompletos antes da produção"
-        },
-        "stack": [
-          "Python",
-          "22 tests",
-          "$0 LLM cost"
-        ],
-        "terminal": [
-          {
-            "t": "cmd",
-            "text": "python -m gate"
-          },
-          {
-            "t": "dim",
-            "text": "Checked at 2026-10-13T09:00Z · policy 1.0"
-          },
-          {
-            "t": "row",
-            "id": "BR-01",
-            "client": "Northpeak Coffee",
-            "ok": true,
-            "reason": "Ready"
-          },
-          {
-            "t": "row",
-            "id": "BR-02",
-            "client": "Northpeak Coffee",
-            "ok": false,
-            "reason": "INACTIVE_PRODUCT"
-          },
-          {
-            "t": "row",
-            "id": "BR-06",
-            "client": "Lumen Skin",
-            "ok": false,
-            "reason": "BANNED_CLAIM"
-          },
-          {
-            "t": "row",
-            "id": "BR-15",
-            "client": "Ridge Outdoor",
-            "ok": false,
-            "reason": "TURNAROUND"
-          },
-          {
-            "t": "row",
-            "id": "BR-16",
-            "client": "Pawfect Treats",
-            "ok": false,
-            "reason": "QUOTA"
-          },
-          {
-            "t": "row",
-            "id": "BR-17",
-            "client": "Pawfect Treats",
-            "ok": true,
-            "reason": "Ready"
-          },
-          {
-            "t": "sum",
-            "text": "19 passed · 11 blocked · 30 checked"
-          },
-          {
-            "t": "cmd",
-            "text": "python -m unittest discover -s tests"
-          },
-          {
-            "t": "ok",
-            "text": "Ran 22 tests · OK"
-          }
-        ],
-        "links": [
-          {
-            "label": {
-              "en": "Code",
-              "pt": "Código"
-            },
-            "href": "https://github.com/Micaelly2222/kasper-production-gate"
-          }
-        ]
-      },
-      {
-        "id": "pipeline",
-        "visual": "pipeline",
-        "kicker": {
-          "en": "Data engineering",
-          "pt": "Engenharia de dados"
-        },
-        "title": {
-          "en": "YouTube analytics pipeline, scheduled daily with Airflow",
-          "pt": "Pipeline de análise do YouTube, agendado todo dia no Airflow"
-        },
-        "stack": [
-          "Python",
-          "Airflow",
-          "Pandas",
-          "SQL"
-        ],
-        "pipeline": [
-          {
-            "en": "YouTube Data API",
-            "pt": "YouTube Data API"
-          },
-          {
-            "en": "Python extractor",
-            "pt": "Extrator em Python"
-          },
-          {
-            "en": "Pandas · one table",
-            "pt": "Pandas · tabela única"
-          },
-          {
-            "en": "SQL KPIs",
-            "pt": "KPIs em SQL"
-          }
-        ],
-        "schedule": {
-          "en": "Airflow · daily 01:30",
-          "pt": "Airflow · todo dia 01:30"
-        },
-        "links": [
-          {
-            "label": {
-              "en": "Code",
-              "pt": "Código"
-            },
-            "href": "https://github.com/Micaelly2222/extracao_e_analise_de_dados_do_youtube"
-          }
-        ]
       }
     ],
     "more_title": {
@@ -266,35 +302,35 @@
     "more": [
       {
         "name": {
+          "en": "Brazil credit dashboard",
+          "pt": "Painel de crédito do Brasil"
+        },
+        "stack": "DuckDB · SQL · Power BI",
+        "href": "https://micaelly2222.github.io/dashboard-credito-brasil/"
+      },
+      {
+        "name": {
+          "en": "Ad brief gate",
+          "pt": "Gate de briefings"
+        },
+        "stack": "Python · 22 tests",
+        "href": "https://github.com/Micaelly2222/kasper-production-gate"
+      },
+      {
+        "name": {
+          "en": "YouTube analytics pipeline",
+          "pt": "Pipeline de dados do YouTube"
+        },
+        "stack": "Airflow · Pandas · SQL",
+        "href": "https://github.com/Micaelly2222/extracao_e_analise_de_dados_do_youtube"
+      },
+      {
+        "name": {
           "en": "Café management system",
           "pt": "Sistema de cafeteria"
         },
         "stack": "Flask · PostgreSQL · Docker",
         "href": "https://github.com/Micaelly2222/sistema_gerenciamento_python_flask"
-      },
-      {
-        "name": {
-          "en": "Company management API",
-          "pt": "API de gestão de empresa"
-        },
-        "stack": "FastAPI · ORM",
-        "href": "https://github.com/Micaelly2222/API_gestao_empresa"
-      },
-      {
-        "name": {
-          "en": "ORM vs. index benchmark",
-          "pt": "ORM vs. índice"
-        },
-        "stack": "Python · SQL",
-        "href": "https://github.com/Micaelly2222/estudos_orm_index"
-      },
-      {
-        "name": {
-          "en": "HTML tag counter",
-          "pt": "Contador de tags HTML"
-        },
-        "stack": "FastAPI · React",
-        "href": "https://github.com/Micaelly2222/contador_tags"
       },
       {
         "name": {
@@ -510,6 +546,14 @@
         },
         "school": "UFMT",
         "dates": "2020"
+      },
+      {
+        "degree": {
+          "en": "Azure Fundamentals (AZ-900)",
+          "pt": "Azure Fundamentals (AZ-900)"
+        },
+        "school": "Microsoft",
+        "kind": "cert"
       }
     ],
     "langs": {
